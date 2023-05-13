@@ -1,12 +1,13 @@
 import React from 'react'
 import './Header.css'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
 	<div className='header'>
-		<div className="logo">
+		<Link to='/' className="logo" style={{textDecoration:'none'}}>
 			<img src='/assets/logo.svg' alt='' className='logo_img'/>
-		</div>
+		</Link>
 		<div className="header_menu">
 			<div className='line'>
 				<div className='line1'></div>

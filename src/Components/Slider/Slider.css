@@ -111,6 +111,15 @@ background: radial-gradient(circle, rgba(43,41,57,1) 0%, rgba(21,20,29,1) 35%, r
 	height: 100px;
 	font-size: 14px;
 	margin-top: 90px;
+
+}
+
+.social_networks div{
+ transition: all 0.3s ease-in;
+}
+
+.social_networks div:hover{
+  scale: 1.2;
 }
 
 

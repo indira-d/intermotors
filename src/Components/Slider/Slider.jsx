@@ -13,9 +13,9 @@ const Slider = () => {
 			<div className="slider_text">Профессиональный подбор и продажа автомобилей в Бишкеке</div>
 			 <button className="slider_button">Подробнее</button>
 			 <div className="social_networks">
-				<InstagramOutlined style={{marginBottom: '15px'}}/>
-				<WhatsAppOutlined style={{marginBottom: '15px'}}/>
-				<FacebookOutlined />
+				<div><InstagramOutlined style={{marginBottom: '15px'}} className='network_icon'/></div>
+				<div><WhatsAppOutlined style={{marginBottom: '15px'}} className='network_icon'/></div>
+				<div><FacebookOutlined className='network_icon'/></div>
 			 </div>
 		</div>
 		<div className="right_block">

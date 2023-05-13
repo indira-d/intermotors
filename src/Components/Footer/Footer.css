@@ -119,4 +119,25 @@ textarea{
 	display: flex;
 	align-self: flex-end;
 	margin-right: 20px;
+	transition: all 0.3s ease-in;
+}
+
+.submit_btn:hover{
+	background: #5fa618;
+	color: white;
+	scale: 1.07;
+}
+
+.social_networks_icons{
+	display: flex;
+
+}
+
+.social_networks_icons div{
+	transition: all 0.3s ease-in;
+}
+
+.social_networks_icons div:hover{
+  scale: 1.2;
+  color: #5fa618;
 }
