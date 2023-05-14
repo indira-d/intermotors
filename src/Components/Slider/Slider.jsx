@@ -19,23 +19,23 @@ const Slider = () => {
 			 </div>
 		</div>
 		<div className="right_block">
-
 			<div className="carousel">
 				<Carousel 
 					showThumbs={false} 
 					showStatus={false}
 					autoPlay={true}
-		
 					>	
+				<div className='slider_img_block'>
+                    <img src="/assets/car1.svg" className='slider_img' />
+                </div>
+				<div className='slider_img_block'>
+                    <img src="/assets/car2.svg" className='slider_img'/>
+                </div>
                 <div className='slider_img_block'>
                     <img src="/assets/car1.svg" className='slider_img' />
                 </div>
-                <div className='slider_img_block'>
-                    <img src="/assets/car2.svg" className='slider_img'/>
-                </div>
-				{/* <div className='slider_img_block'>
-                    <img src="/assets/car3.svg" className='slider_img'/>
-                </div> */}
+               
+			
             </Carousel>
 			</div>
 		</div>

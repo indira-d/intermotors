@@ -27,14 +27,15 @@ const Catalogue = () => {
 			</div>
 		</div>
 		<div className="catalogue_items_block">
-			<CatalogueItem />
-			<CatalogueItem />
-			<CatalogueItem />
-			<CatalogueItem />
-			<CatalogueItem />
-			<CatalogueItem />
-			<CatalogueItem />
-			<CatalogueItem />
+			<Link to='/car/1' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+			<Link to='/car/2' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+			<Link to='/car/3' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+			<Link to='/car/4' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+			<Link to='/car/5' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+			<Link to='/car/6' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+			<Link to='/car/7' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+			<Link to='/car/8' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+			
 		</div>
 		<div className='btn_wrapper_end'>
 				<Link to='/catalogue' className="green_outlined_btn" style={{textDecoration: 'none'}}>Посмотреть весь каталог</Link>

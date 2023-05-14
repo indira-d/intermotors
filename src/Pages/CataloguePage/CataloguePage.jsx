@@ -5,6 +5,7 @@ import CatalogueItem from '../../Components/Catalogue/CatalogueItem';
 import Sider from 'antd/es/layout/Sider';
 import { Menu } from 'antd';
 import Footer from '../../Components/Footer/Footer';
+import { Link } from 'react-router-dom';
 
 
 const CataloguePage = () => {
@@ -33,15 +34,15 @@ const CataloguePage = () => {
 						</Sider>
 				</div>
 				<div className="catalogue_main">
-					<CatalogueItem/>
-					<CatalogueItem/>
-					<CatalogueItem/>
-					<CatalogueItem/>
-					<CatalogueItem/>
-					<CatalogueItem/>
-					<CatalogueItem/>
-					<CatalogueItem/>
-					<CatalogueItem/>
+					<Link to='/car/1' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+					<Link to='/car/2' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+					<Link to='/car/3' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+					<Link to='/car/4' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+					<Link to='/car/5' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+					<Link to='/car/6' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+					<Link to='/car/7' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+					<Link to='/car/8' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+					<Link to='/car/9' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
 				</div>
 			</div>
 		</div>
