@@ -13,29 +13,29 @@ const Slider = () => {
 			<div className="slider_text">Профессиональный подбор и продажа автомобилей в Бишкеке</div>
 			 <button className="slider_button">Подробнее</button>
 			 <div className="social_networks">
-				<InstagramOutlined style={{marginBottom: '15px'}}/>
-				<WhatsAppOutlined style={{marginBottom: '15px'}}/>
-				<FacebookOutlined />
+				<div><InstagramOutlined style={{marginBottom: '15px'}} className='network_icon'/></div>
+				<div><WhatsAppOutlined style={{marginBottom: '15px'}} className='network_icon'/></div>
+				<div><FacebookOutlined className='network_icon'/></div>
 			 </div>
 		</div>
 		<div className="right_block">
-
 			<div className="carousel">
 				<Carousel 
 					showThumbs={false} 
 					showStatus={false}
 					autoPlay={true}
-		
 					>	
+				<div className='slider_img_block'>
+                    <img src="/assets/car1.svg" className='slider_img' />
+                </div>
+				<div className='slider_img_block'>
+                    <img src="/assets/car2.svg" className='slider_img'/>
+                </div>
                 <div className='slider_img_block'>
                     <img src="/assets/car1.svg" className='slider_img' />
                 </div>
-                <div className='slider_img_block'>
-                    <img src="/assets/car2.svg" className='slider_img'/>
-                </div>
-				{/* <div className='slider_img_block'>
-                    <img src="/assets/car3.svg" className='slider_img'/>
-                </div> */}
+               
+			
             </Carousel>
 			</div>
 		</div>

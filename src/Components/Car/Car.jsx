@@ -1,9 +1,10 @@
 import React from 'react'
+import './Car.css'
 
 const Car = () => {
   return (
-	<div>
-		<img src="/assets/car.svg" alt="" />
+	<div className='car'>
+		<img src="/assets/car.svg" alt="" className='car_img'/>
 	</div>
   )
 }
