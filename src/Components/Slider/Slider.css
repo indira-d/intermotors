@@ -63,6 +63,9 @@ background: radial-gradient(circle, rgba(43,41,57,1) 0%, rgba(21,20,29,1) 35%, r
 	padding-bottom: 50px;
 	
 }
+.carousel .slider.animated{
+   background: none;
+}
 
 .slider_img{
 	height: 100%;
