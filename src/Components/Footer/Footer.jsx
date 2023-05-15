@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import { FacebookOutlined, InstagramOutlined, WhatsAppOutlined } from '@ant-design/icons'
 
 const Footer = () => {
   return (
@@ -22,6 +23,12 @@ const Footer = () => {
 						<div className="contact_title">Телефон:</div>
 						<div className="contact_value">+996 702 744 444</div>
 					 </div>
+					 <div className="social_networks_icons">		
+						<div><InstagramOutlined style={{marginBottom: '15px'}} className='network_icon'/></div>
+						<div><WhatsAppOutlined style={{marginBottom: '15px'}} className='network_icon'/></div>
+						<div><FacebookOutlined className='network_icon'/></div>
+					</div>
+					
 				</div>
 				<div className="footer_form">
 					<input type="text" className="name" placeholder='Ваше имя'/>

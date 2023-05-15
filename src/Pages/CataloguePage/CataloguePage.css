@@ -1,0 +1,36 @@
+.catalogue_page{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.catalogue_banner{
+
+}
+
+.catalogue_sidebar{
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	padding: 20px;
+}
+
+.catalogue_main_content{
+	width: 93%;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	margin: 0 auto;
+}
+
+.catalogue_main{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 3rem;
+	padding: 30px;
+}
+
+.category_filtr{
+	text-align: left;
+	font-weight: bold;
+	margin-left: 27px;
+	margin-bottom: 20px;
+}
