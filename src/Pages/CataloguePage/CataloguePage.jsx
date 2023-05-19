@@ -6,13 +6,18 @@ import Sider from 'antd/es/layout/Sider';
 import { Menu } from 'antd';
 import Footer from '../../Components/Footer/Footer';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { filterByBrand, getCarDetails } from '../../redux/CarSlice';
 
 
 const CataloguePage = () => {
+	const cars = useSelector(state => state.cars.cars)
+	const dispatch = useDispatch()
+	const categories = useSelector(state => state.cars.categories)
 
-	const items1 = ['Toyota', 'Honda', 'Subary', 'Audi', 'BMV', 'Mercedes'].map((key) => ({
-		key,
-		label: `nav ${key}`,
+	const items1 = categories.map((it) => ({
+		key: it.id,
+		label: `${it.name}`,
 		}));
 
   return (
@@ -23,26 +28,27 @@ const CataloguePage = () => {
 			<div className="catalogue_main_content">
 				<div className="catalogue_sidebar">
 					<div className="category_filtr">Фильтр</div>
-					<Sider style={{ color: 'red' }}  width={300}>
+					<Sider  width={300}>
 							<Menu
 								mode="inline"
 								defaultSelectedKeys={['1']}
 								defaultOpenKeys={['sub1']}
 								style={{ height: '100%' }}
 								items={items1}
+								onClick={(e) => dispatch(filterByBrand(e.key))}
 							/>
 						</Sider>
 				</div>
 				<div className="catalogue_main">
-					<Link to='/car/1' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
-					<Link to='/car/2' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
-					<Link to='/car/3' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
-					<Link to='/car/4' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
-					<Link to='/car/5' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
-					<Link to='/car/6' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
-					<Link to='/car/7' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
-					<Link to='/car/8' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
-					<Link to='/car/9' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+					{
+						cars.map(car => (
+							<Link to={`/car/${car.id}`} key={car.id} style={{textDecoration: 'none', color: 'inherit'}}>
+								<CatalogueItem car={car}
+												onClick={() => dispatch(getCarDetails(car.id))}
+								/>
+							</Link>
+						))
+					}
 				</div>
 			</div>
 		</div>

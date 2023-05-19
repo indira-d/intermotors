@@ -63,12 +63,12 @@
 	display: flex;
 	margin: 15px;
 	justify-content: space-between;
-	width: 85%;
+	width: 75%;
 }
 
 .params_title{
 	font-weight: 600;
-	letter-spacing: 0.5px;
+	letter-spacing: 2px;
 }
 
 .car_details_description{
