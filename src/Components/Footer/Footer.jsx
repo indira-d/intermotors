@@ -5,7 +5,6 @@ import { FacebookOutlined, InstagramOutlined, WhatsAppOutlined } from '@ant-desi
 const Footer = () => {
   return (
 	<div className='footer'>
-		
 		<div className="footer_img_block">
 			<img src="/assets/footer.svg" alt="" className="footer_img" />
 		</div>

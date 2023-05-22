@@ -14,12 +14,14 @@ const AboutCompany = () => {
 					<div className="about_description">Компания «InterMOTORS» предоставляет услуги по поставке электромобилей из Китая в Кыргызстан и Россию, а также по странам СНГ. Мы являемся молодой компанией в этом направлении, но уже многие годы мы занимаемся логистическими операциями. Китайские заводы являются одними из лучших в мире по производству электрокаров. У нас есть специальная команда профессионалов в Китае базирующаяся в четырех провинциях (Ухань, Гуанжоу, Чиньдау, Ханжоу) мы вместе с командой с радостью подберем для Вас лучший вариант!</div>
 				    <button className="about_btn">Oб электромобилях</button>
 			</div>
+
 			<div className="about_content_right">
 				<div className="about_img_block">
 					<img src="/assets/about.svg" alt="" className="about_img" />
 				</div>
 			</div>
 		</div>
+		
 		<div className="about_content_bottom">
 			<div className="about_bottom_item">
 				<div className="about_bottom_img_block">

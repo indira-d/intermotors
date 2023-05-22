@@ -18,12 +18,12 @@ const Catalogue = () => {
 		
 		<div className="catalogue_filter">
 			<div className='btn_wrapper'>
-				<Link to='/catalogue' className="green_outlined_btn" style={{textDecoration: 'none'}}>Посмотреть весь каталог</Link>
+				<Link to='/catalogue' className="green_outlined_btn" style={{textDecoration: 'none'}}>Посмотреть каталог</Link>
 			</div>
 			<div className="filter_block">
-				<Link to='/catalogue' className="brand_btn" style={{background: '#5fa618', border: '1px solid #5fa618',  color: 'white', textDecoration: 'none'}}>ВСЕ</Link>
+				<Link to='/catalogue' className="brand_btn" style={{background: '#5fa618', border: '1px solid #5fa618',  color: 'white', textDecoration: 'none', textAlign: 'center'}}>ВСЕ</Link>
 				{
-					categories.map(it => (
+					categories?.map(it => (
 					<button className="brand_btn" 
 							key={it.id}
 							onClick={() => dispatch(filterByBrand(it.id))}
@@ -34,7 +34,7 @@ const Catalogue = () => {
 		</div>
 		<div className="catalogue_items_block">
 			{
-				cars.map(car => (
+				cars?.map(car => (
 					<Link 
 						to='/car/1' 
 						key={car.id} 

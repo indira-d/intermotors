@@ -26,10 +26,13 @@
 }
 
 .similar_cars{
-	display: flex;
-	justify-content: space-around;
+	display: grid;
+    gap: 2rem;
 	width:85%;
 	margin: 30px auto;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+
 }
 
 .similars_header{
@@ -41,27 +44,99 @@
 }
 
 .car_params{
-	/* background: #15141d; */
-	display: flex;
+	width: 90%;
+	display: grid;
 	color: rgba(161, 161, 161, 1);
-	font-size: 16px;
-	
+	font-size: 16px;	
 	margin: 80px auto !important;
 	justify-content: space-around;
-
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+	justify-content: center;
 }
 
-.params_left{
-	width: 38%;
+@media screen and (max-width: 1050px) and (min-width: 601px){
+	.car_params{
+		grid-template-columns: 1fr;
+		gap: 0;
+		
+	}
+	.car_params_item{
+		margin: 0 auto;
+	}
 }
 
-.params_right{
-	width: 38%;
+@media screen and (max-width: 600px) {
+	.car_params{
+		grid-template-columns: 1fr;
+		gap: 0;
+
+		
+	}
+	.car_params_item{
+		margin: 0 auto;
+		font-size: 13px;
+		letter-spacing: 0.5px;
+		width: 90% !important;
+		margin: 10px auto  !important;
+	}
+
+	.params_title{
+		font-weight: 500;
+       letter-spacing: 0.5px !important;
+	   display: grid;
+	   grid-template-columns: 1fr 1fr;
+	   
+	}
+
+	.params_value{
+		text-align: right;
+	}
+
+	.car_details_description{
+		margin: 0 auto !important;
+		font-size: 14px;
+		width: 85% !important;
+	}
+}
+
+@media screen and (max-width: 1400px){
+	.car_details_header{
+      margin: 0px auto !important;
+	  padding: 20px;
+	}
+
+	.car_header_block{
+		display: flex;
+		flex-direction: column;
+		margin: 10px auto;
+		justify-content: flex-start;
+		width: 90% !important;
+	}
+
+	.order_btn{
+		align-self: flex-start;
+		margin: 10px 0;
+	}
+
+	.car_details_price {
+		align-self: flex-start;
+		margin: 10px 0;
+	}
+
+	.car_details_note1{
+		align-self: flex-start;
+		margin: 10px 0;
+	}
+	.car_details_note2{
+		width: 90% !important;
+		margin: 10px 0;
+	}
 }
 
 .car_params_item{
 	display: flex;
-	margin: 15px;
+	margin: 15px auto;
 	justify-content: space-between;
 	width: 75%;
 }
@@ -117,7 +192,7 @@
 
 .car_details_note2{
 	color: rgba(119, 119, 119, 1);
-	margin: 20px 0;
+	margin: 10px 15px;
 }
 
 .order_btn{

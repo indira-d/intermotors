@@ -9,6 +9,7 @@ import Testimonials from '../../Components/Testimonials/Testimonials'
 import Footer from '../../Components/Footer/Footer'
 import { getCars, getCategories, getSliderData } from '../../redux/CarSlice'
 import { useDispatch } from 'react-redux'
+import './Home.css'
 
 const Home = () => {
 
@@ -22,7 +23,7 @@ const Home = () => {
   }, [dispatch])
 
   return (
-	<div>
+	<div className='home'>
 		<Header/>
 		<Slider />
 		<Catalogue />
