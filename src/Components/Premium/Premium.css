@@ -1,7 +1,5 @@
 .premium{
-	height: 800px;
 	position: relative;
-
 }
 
 .premium_img_block{
@@ -16,11 +14,38 @@
 	object-fit: cover;
 }
 
+@media screen and (max-width: 940px){
+	.premium{
+		display: grid !important;
+		grid-template-columns: 1fr !important;
+		height: 100%;
+	}
+
+	.text_wrapper{
+        background: linear-gradient(139deg, rgba(131,133,138,1) 0%, rgba(50,53,59,1) 100%);
+	}
+
+	.premium_text_block{
+		position: relative !important;
+		width: 75% !important;
+		margin: 50px auto;
+		font-size: 14px;
+		top: 0 !important;
+		right: 0 !important;
+   }
+
+	.premium_header{
+       font-size: 24px !important;
+	}		
+}
+
+
+
 .premium_text_block{
 	position: absolute;
 	width: 40%;
 	right: 30px;
-	top: 250px;
+	top: 10%;
 	z-index: 1;
 	color: #e0e0e0;
 }
