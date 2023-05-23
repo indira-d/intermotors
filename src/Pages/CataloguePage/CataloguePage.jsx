@@ -28,7 +28,7 @@ const CataloguePage = () => {
 			<div className="catalogue_main_content">
 				<div className="catalogue_sidebar">
 					<div className="category_filtr">Фильтр</div>
-					<Sider  width={300}>
+					<Sider >
 							<Menu
 								mode="inline"
 								defaultSelectedKeys={['1']}
@@ -42,11 +42,11 @@ const CataloguePage = () => {
 				<div className="catalogue_main">
 					{
 						cars.map(car => (
-							<Link to={`/car/${car.id}`} key={car.id} style={{textDecoration: 'none', color: 'inherit'}}>
+							//<Link to={`/car/${car.id}`} key={car.id} style={{textDecoration: 'none', color: 'inherit'}}>
 								<CatalogueItem car={car}
 												onClick={() => dispatch(getCarDetails(car.id))}
 								/>
-							</Link>
+							//</Link>
 						))
 					}
 				</div>

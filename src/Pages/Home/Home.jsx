@@ -12,9 +12,7 @@ import { useDispatch } from 'react-redux'
 import './Home.css'
 
 const Home = () => {
-
 	const dispatch = useDispatch()
-
 
   useEffect(() => {
 	dispatch(getCars())

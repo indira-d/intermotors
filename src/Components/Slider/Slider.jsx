@@ -24,9 +24,12 @@ const Slider = () => {
 			<div className="right_block">
 				<div className="carousel">
 					<Carousel 
+					    style={{transition: 'all 0.5s ease-in'}}
 						showThumbs={false} 
 						showStatus={false}
 						autoPlay={true}
+						interval={3000}
+						infiniteLoop={true}
 						>	
 						<div className='slider_img_block'>
 							<img src="/assets/car1.svg" className='slider_img' />

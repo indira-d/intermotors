@@ -250,3 +250,45 @@ box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
 	gap: 1rem;
 	grid-template-columns: repeat(auto-fit, minmax(70px, auto))
 }
+
+
+.modal{
+	display: flex;
+	flex-direction: column;
+}
+
+.ant-modal{
+	padding-bottom: 0 !important;
+}
+
+.input_modal{
+	border-bottom: 1.5px solid #5fa618;
+	color: #1d1d1d;
+	font-size: 13px;
+	padding: 5px;
+}
+
+.ant-modal-content{
+	background: none;
+	height: 100% !important;
+	
+}
+
+.modal_btn{
+	
+	padding: 10px;
+	color: whitesmoke;
+    font-size: 13px;
+	background: #5fa618;
+	width: 110px;
+	margin: 20px auto;
+	text-align: center;
+	border: none;
+	border-radius: 15px;
+	letter-spacing: 0.5px;
+	display: flex;
+	align-self: center;
+	justify-content: center;
+
+}
+

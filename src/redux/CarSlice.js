@@ -84,6 +84,18 @@ export const findCarByVincode = createAsyncThunk(
 	}
 )
 
+export const createOrder = createAsyncThunk(
+	'cars/create-order',
+	async(params) => {
+		try {
+			const {data} = await publicRequest.post(`/order/create/`, params)
+			return data
+		} catch (error) {
+			console.log(error)
+		}
+	}
+)
+
 export const carSlice = (createSlice({
 	name: 'cars',
 	initialState,

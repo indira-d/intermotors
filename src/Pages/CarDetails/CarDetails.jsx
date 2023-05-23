@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 
 const CarDetails = () => {
 	const car = useSelector(state => state.cars.car)
+	const similar = useSelector(state => state.cars.car.similar_cars)
   return (
 	<div className='car_details'>
 		<Header />
@@ -101,10 +102,10 @@ const CarDetails = () => {
 		
 		<div className="similars_header">Похожие авто</div>
 		<div className="similar_cars">
-					<Link to='/car/1' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
-					<Link to='/car/2' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
-					<Link to='/car/3' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
-					<Link to='/car/4' style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem /></Link>
+			{
+				similar?.map((it, index) => 
+					index < 8 ?<Link to={`/car/{it.id}`} style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem car={it}/></Link> : null)
+			}
 		</div>
 		<Footer />
 	</div>
