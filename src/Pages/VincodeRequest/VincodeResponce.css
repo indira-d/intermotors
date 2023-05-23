@@ -1,6 +1,11 @@
 
 .v_req_img_block{
-		background: #15141d;
+    background: #15141d;
+    width: 100%;
+}
+
+.v_req_img{
+    width: 100%;
 }
 
 .v_req_text{
@@ -8,6 +13,72 @@
 	padding: 40px ;
 	color: rgb(183, 184, 185);
 }
+
+@media screen and (max-width: 685px) and (min-width: 550px){
+
+    .v_req_img_block{
+        height: 100%;
+    }
+    .req_form_subtitle{
+        flex-wrap: wrap;
+        text-align: center;
+        font-size: 12px;
+
+    }
+    .vincode_input{
+        margin: 5px;
+    }
+    .v_req_img{
+        height: 100%;
+    }
+    .v_req_text{
+        padding: 20px;
+    }
+
+    .req_form_title{
+        font-size: 20px;
+    }
+
+    .v_req_form_text{
+        top: 50px !important;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+
+    .v_req_img_block{
+        height: 100%;
+    }
+    .req_form_subtitle{
+        flex-wrap: wrap;
+        text-align: center;
+        font-size: 10px;
+
+    }
+    .vincode_input{
+        margin: 5px auto;
+        width: 200px !important;
+    }
+    .v_req_img{
+        height: 400px;
+        object-fit: cover;
+    }
+    .v_req_text{
+        padding: 20px;
+    }
+
+    .req_form_title{
+        font-size: 14px;
+    }
+
+    .v_req_form_text{
+        top: 0px !important;
+    }
+}
+
+
+
 .v_req_header{
 	position: absolute;
 	top: 0;
@@ -17,7 +88,7 @@
 }
 
 .v_req_header .header{
-	background: none,;
+	background: none;
 }
 .v_req_text div{
 	margin: 15px;

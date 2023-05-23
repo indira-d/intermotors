@@ -49,3 +49,20 @@
 	border-bottom: 1px solid white;
 	align-self: flex-end;
 }
+
+.car_tracker_menu{
+    color: #6B9640;
+    margin-right: 30px;
+    padding: 5px 0;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #6B9640;
+    font-size: 11px;
+    line-height: 0.8;
+    font-weight: 600;
+    transition: all 0.3s ease-in;
+}
+
+.car_tracker_menu:hover{
+    color: whitesmoke;
+    scale: 1.03;
+}

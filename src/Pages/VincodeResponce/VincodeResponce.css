@@ -7,11 +7,69 @@
 	margin:  30px 15px 30px 50px;
 }
 
-.car_treaker_top_block{
+.car_treker_top_block{
 
 	width: 100%;
 	display: grid !important;
 	grid-template-columns: 4fr 2fr !important;
+}
+
+@media screen and (max-width: 1050px) and (min-width: 675px) {
+    .car_treker_top_block{
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    .car_traker_details{
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+}
+
+@media screen and (max-width: 675px)  {
+    .car_treker_top_block{
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    .car_traker_details{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .car_tracker_img_block{
+        height: 100%;
+    }
+
+
+    .image-gallery-thumbnails-wrapper{
+        width: 100%;
+    }
+
+    .image-gallery-thumbnails-container{
+        width: 100%;
+
+    }
+
+    .image-gallery-content{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        justify-content: center;
+    }
+
+    .car_tracker_img_block .image-gallery-image{
+        height: 300px !important;
+    }
+
+    .image-gallery-slide-wrapper{
+        margin: 20px;
+    }
+
+    .image-gallery-thumbnails-wrapper.right .image-gallery-thumbnails{
+        top: 20px !important;
+        left: -20px;
+    }
 }
 
 .image-gallery-slides{
@@ -83,6 +141,7 @@
 	line-height: 0.7;
 	margin: 40px 0;
 	letter-spacing: 1px;
+    color: whitesmoke;
 }
 
 .checkpoints{

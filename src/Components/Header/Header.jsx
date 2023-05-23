@@ -8,13 +8,18 @@ const Header = () => {
 		<Link to='/' className="logo" style={{textDecoration:'none'}}>
 			<img src='/assets/logo.svg' alt='' className='logo_img'/>
 		</Link>
-		<div className="header_menu">
-			<div className='line'>
-				<div className='line1'></div>
-				<div className='line2'></div>
-				<div className='line3'></div>
-			</div>
-		</div>
+        <Link to={'/vincode-request'}
+              style={{textDecoration: 'none'}}
+              className="car_tracker_menu">
+            CAR TRACKER
+        </Link>
+		{/*<div className="header_menu">*/}
+		{/*	<div className='line'>*/}
+		{/*		<div className='line1'></div>*/}
+		{/*		<div className='line2'></div>*/}
+		{/*		<div className='line3'></div>*/}
+		{/*	</div>*/}
+		{/*</div>*/}
 	</div>
   )
 }

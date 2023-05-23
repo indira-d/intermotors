@@ -35,11 +35,10 @@ const VincodeResponce = () => {
 	<div className='vincode_responce'>
 		<Header />
 		<div>
-		
 			{
 			    carTracker.map(car => (
 				<div>
-					<div className='car_treaker_top_block'>
+					<div className='car_treker_top_block'>
 						<div className="car_tracker_img_block">
 							<ImageGallery 
 								thumbnailPosition='right'
@@ -91,6 +90,7 @@ const VincodeResponce = () => {
 									<div className="checkpoint_value">{car.info_from_company}</div>
 								</div>
 						</div>
+
 					</div>
 
 					<div className="car_traker_description">
