@@ -17,7 +17,7 @@ const CatalogueItem = ({car}) => {
         dispatch(createOrder(
                 {
                    phone_number: phone,
-				   username: name,
+				   name,
 				   vehicle: carId
                 }
         ))
@@ -60,7 +60,7 @@ const CatalogueItem = ({car}) => {
 		</div>	
 			<div className="cat_item_buttons">
 				<button className="btn_green" onClick={() => {setIsModalOpen(true); setCarId(car.id)}}>Заказать</button>
-				<Link to={`/car/:${car.id}`} style={{textDecoration: 'none', color: 'inherit', fontSize: '12px', verticalAlign: 'middle'}} className="btn_transparent" >Подробнее</Link>
+				<Link to={`/car/:${car.id}`} style={{textDecoration: 'none', color: 'inherit', fontSize: '12px'}} className="btn_transparent" >Подробнее</Link>
 			</div>
 		</div>
 		  <Modal 

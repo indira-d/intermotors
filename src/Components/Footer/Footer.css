@@ -151,11 +151,12 @@ textarea{
 
 }
 
-.social_networks_icons div{
+.social_networks_icons .network_icon{
 	transition: all 0.3s ease-in;
+	margin: 10px;
 }
 
-.social_networks_icons div:hover{
+.social_networks_icons .network_icon:hover{
   scale: 1.2;
   color: #5fa618;
 }

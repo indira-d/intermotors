@@ -3,6 +3,7 @@ import './Slider.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { FacebookOutlined, InstagramOutlined, WhatsAppOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 const Slider = () => {
   return (
@@ -16,9 +17,9 @@ const Slider = () => {
 					<button className="slider_button">Подробнее</button>
 				</div>
 				<div className="social_networks">
-					<div><InstagramOutlined style={{marginBottom: '15px'}} className='network_icon'/></div>
-					<div><WhatsAppOutlined style={{marginBottom: '15px'}} className='network_icon'/></div>
-					<div><FacebookOutlined className='network_icon'/></div>
+					<Link to='https://www.instagram.com/inter_motors.kg/'><InstagramOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
+					<Link to='https://wa.me/996702744444'><WhatsAppOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
+					<Link to='https://www.facebook.com/people/Кылымбек-Кудайбердиев/pfbid02qfh2V5aKvvYWxe4aNzhReHQHCy5x7iwuVdUQD2bX7r9gEziKS4YKbHedo5ThAswMl/'><FacebookOutlined className='network_icon'  style={{ color: 'white'}}/></Link>
 				</div>
 			</div>
 			<div className="right_block">
@@ -30,6 +31,7 @@ const Slider = () => {
 						autoPlay={true}
 						interval={3000}
 						infiniteLoop={true}
+                        showArrows={false}
 						>	
 						<div className='slider_img_block'>
 							<img src="/assets/car1.svg" className='slider_img' />

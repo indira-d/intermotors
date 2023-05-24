@@ -23,7 +23,7 @@ const Catalogue = () => {
 				<Link to='/catalogue' className="brand_btn" style={{background: '#5fa618', border: '1px solid #5fa618',  color: 'white', textDecoration: 'none', textAlign: 'center'}}>ВСЕ</Link>
 				{
 					categories?.map(it => (
-					<button className="brand_btn" 
+					<button className="brand_btn"
 							key={it.id}
 							onClick={() => dispatch(filterByBrand(it.id))}
 							>{it.name}</button>
@@ -34,19 +34,11 @@ const Catalogue = () => {
 		<div className="catalogue_items_block" >
 			{
 				cars?.map((car, index) => (
-					index < 12 ? 
-					// <Link 
-					// 	to='/car/1' 
-					// 	key={car.id} 
-					// 	style={{textDecoration: 'none', color: 'inherit'}}
-					// 	onClick={() => dispatch(getCarDetails(car.id))}
-					// 	>
-						<CatalogueItem 
-							car={car} 	
+					index < 12 ?
+						<CatalogueItem
+							car={car}
 							onClick={() => dispatch(getCarDetails(car.id))}
 						/>
-					// </Link>
-					
 					: null
 				))
 			}
