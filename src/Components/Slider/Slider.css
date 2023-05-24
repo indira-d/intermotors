@@ -1,17 +1,41 @@
 .slider{
 	position: relative;
 	height: 500px;
-	/* background: #15141d; */
 	color: #FFFFFF;
 	font-size: 18px;
 	letter-spacing: 2px;
 	padding: 50px;
 	font-weight: 400;
-	display: grid;
-	grid-template-columns: 1fr 2fr;
 	z-index: 2;
-	background: rgb(43,41,57);
-background: radial-gradient(circle, rgba(43,41,57,1) 0%, rgba(21,20,29,1) 35%, rgba(21,20,29,1) 100%);
+
+}
+
+.slider_wrapper{
+		display: grid;
+	   grid-template-columns: 1fr 2fr;
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+	.slider{
+		height: 100%;
+	}
+	.slider_wrapper{
+		display: grid;
+		grid-template-columns: 1fr;
+}
+
+.left_block{
+	display: flex;
+	justify-content: space-between;
+}
+
+	
+}
+
+.slider{
+	background: radial-gradient(circle, rgba(43,41,57,1) 0%, rgba(21,20,29,1) 35%, rgba(21,20,29,1) 100%);
 }
 
 .slider_text{
@@ -47,7 +71,6 @@ background: radial-gradient(circle, rgba(43,41,57,1) 0%, rgba(21,20,29,1) 35%, r
 	padding-left: 20px;
 }
 .right_block{
-
 	display: flex;
 	align-items: flex-end;
 }
@@ -61,6 +84,7 @@ background: radial-gradient(circle, rgba(43,41,57,1) 0%, rgba(21,20,29,1) 35%, r
 	height: 400px;
 	width: 100%;
 	padding-bottom: 50px;
+	background: none;
 	
 }
 .carousel .slider.animated{
@@ -70,6 +94,7 @@ background: radial-gradient(circle, rgba(43,41,57,1) 0%, rgba(21,20,29,1) 35%, r
 .slider_img{
 	height: 100%;
 	width: 100%;
+	background: none;
 	object-fit: contain;
 	filter: drop-shadow(-14px 32px 20px #a7a5a5);
 }
@@ -82,8 +107,12 @@ background: radial-gradient(circle, rgba(43,41,57,1) 0%, rgba(21,20,29,1) 35%, r
 	bottom: 10px !important;
 	left: 0px;
 	z-index: 3 !important;
-
 }
+
+ .carousel .slider-wrapper .slider.animated{
+	 /* background: none !important;  */
+	 background: none;
+	}
 
 .carousel .control-dots .dot.selected{
 	background: #6B9640!important;
@@ -96,7 +125,7 @@ background: radial-gradient(circle, rgba(43,41,57,1) 0%, rgba(21,20,29,1) 35%, r
 
 .intermotors{
 	position: absolute;
-	font-size: 120px;
+	font-size: 6rem;
 	font-weight: bold;
 	letter-spacing: 10px;
 	z-index: 1;
@@ -104,7 +133,14 @@ background: radial-gradient(circle, rgba(43,41,57,1) 0%, rgba(21,20,29,1) 35%, r
 	opacity: 0.3;
 	top: 20px;
 	left: 30px;
-	line-height: 155px
+	line-height: 155px;
+	width: 90%;
+}
+
+@media screen and (max-width: 550px){
+	.intermotors{
+		font-size: 3.9rem;
+	}
 }
 
 .social_networks{
@@ -114,6 +150,19 @@ background: radial-gradient(circle, rgba(43,41,57,1) 0%, rgba(21,20,29,1) 35%, r
 	height: 100px;
 	font-size: 14px;
 	margin-top: 90px;
+
+}
+
+.social_networks div{
+ transition: all 0.3s ease-in;
+}
+
+.social_networks div:hover{
+  scale: 1.2;
+}
+
+.control-arrow .control-prev{
+  color: red;
 }
 
 
