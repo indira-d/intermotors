@@ -7,29 +7,26 @@
 	padding: 50px;
 	font-weight: 400;
 	z-index: 2;
-
 }
 
 .slider_wrapper{
 		display: grid;
 	   grid-template-columns: 1fr 2fr;
-
 }
 
 @media only screen and (max-width: 1000px) {
-
 	.slider{
 		height: 100%;
 	}
 	.slider_wrapper{
 		display: grid;
 		grid-template-columns: 1fr;
-}
+    }
 
-.left_block{
-	display: flex;
-	justify-content: space-between;
-}
+	.left_block{
+		display: flex;
+		justify-content: space-between;
+	}
 
 	
 }
@@ -153,11 +150,11 @@
 
 }
 
-.social_networks div{
+.social_networks .network_icon{
  transition: all 0.3s ease-in;
 }
 
-.social_networks div:hover{
+.social_networks .network_icon:hover{
   scale: 1.2;
 }
 

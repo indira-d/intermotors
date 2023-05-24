@@ -35,18 +35,10 @@ const Catalogue = () => {
 			{
 				cars?.map((car, index) => (
 					index < 12 ?
-					// <Link
-					// 	to='/car/1'
-					// 	key={car.id}
-					// 	style={{textDecoration: 'none', color: 'inherit'}}
-					// 	onClick={() => dispatch(getCarDetails(car.id))}
-					// 	>
 						<CatalogueItem
 							car={car}
 							onClick={() => dispatch(getCarDetails(car.id))}
 						/>
-					// </Link>
-
 					: null
 				))
 			}

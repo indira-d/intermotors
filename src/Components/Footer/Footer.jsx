@@ -1,6 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import { FacebookOutlined, InstagramOutlined, WhatsAppOutlined } from '@ant-design/icons'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -23,9 +24,12 @@ const Footer = () => {
 						<div className="contact_value">+996 702 744 444</div>
 					 </div>
 					 <div className="social_networks_icons">		
-						<div><InstagramOutlined style={{marginBottom: '15px'}} className='network_icon'/></div>
+						{/* <div><InstagramOutlined style={{marginBottom: '15px'}} className='network_icon'/></div>
 						<div><WhatsAppOutlined style={{marginBottom: '15px'}} className='network_icon'/></div>
-						<div><FacebookOutlined className='network_icon'/></div>
+						<div><FacebookOutlined className='network_icon'/></div> */}
+						<Link to='https://www.instagram.com/inter_motors.kg/'><InstagramOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
+						<Link to='https://wa.me/996702744444'><WhatsAppOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
+						<Link to='https://www.facebook.com/people/Кылымбек-Кудайбердиев/pfbid02qfh2V5aKvvYWxe4aNzhReHQHCy5x7iwuVdUQD2bX7r9gEziKS4YKbHedo5ThAswMl/'><FacebookOutlined className='network_icon'  style={{ color: 'white'}}/></Link>
 					</div>
 					
 				</div>

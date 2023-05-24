@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import CatalogueItem from '../../Components/Catalogue/CatalogueItem';
 import Footer from '../../Components/Footer/Footer';
 import { useSelector } from 'react-redux';
+import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
 
 const CarDetails = () => {
 	const car = useSelector(state => state.cars.car)
@@ -19,6 +20,7 @@ const CarDetails = () => {
 					showStatus={false}
 					autoPlay={true}
 					showIndicators={false}
+					showArrows={false}
 					>	
 						<div className='slider_img_block'>
 							<img src="/assets/car1.svg" className='slider_img' />
@@ -108,6 +110,7 @@ const CarDetails = () => {
 			}
 		</div>
 		<Footer />
+		<ScrollToTop />
 	</div>
   )
 }

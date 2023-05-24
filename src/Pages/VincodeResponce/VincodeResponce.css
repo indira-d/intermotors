@@ -24,6 +24,9 @@
         width: 80%;
         margin: 0 auto;
     }
+	.car_traker_description{
+		width: 80% !important;
+	}
     
 }
 
@@ -32,6 +35,10 @@
         display: grid !important;
         grid-template-columns: 1fr !important;
     }
+
+	.car_traker_description{
+		width: 80% !important;
+	}
 
     .car_traker_details{
         width: 80%;
@@ -107,7 +114,7 @@
 }
 
 .car_traker_description{color: rgb(191, 189, 189);
-	width: 80%;
+	width: 93%;
 	margin: 0 auto;
 }
 
@@ -119,10 +126,17 @@
 .car_traker_description h2{
 	margin: 20px 0;
 	font-weight: 600;
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+.car_traker_description div{
+
+	line-height: 1.5;
 }
 
 .car_traker_description p{
-	margin: 10px 0;
+	margin: 15px 0;
 }
 
 
