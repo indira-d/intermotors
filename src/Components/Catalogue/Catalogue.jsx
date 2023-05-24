@@ -5,6 +5,7 @@ import CatalogueItem from './CatalogueItem'
 const Catalogue = () => {
   return (
 	<div className='catalogue'>
+
 	<h2 className='h2'>Каталог машин</h2>
 		
 		<div className="catalogue_filter">
