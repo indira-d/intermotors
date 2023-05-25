@@ -42,11 +42,9 @@ const CataloguePage = () => {
 				<div className="catalogue_main">
 					{
 						cars.map(car => (
-							//<Link to={`/car/${car.id}`} key={car.id} style={{textDecoration: 'none', color: 'inherit'}}>
-								<CatalogueItem car={car}
-												onClick={() => dispatch(getCarDetails(car.id))}
-								/>
-							//</Link>
+							<CatalogueItem car={car}
+											onClick={() => dispatch(getCarDetails(car.id))}
+							/>					
 						))
 					}
 				</div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Modal } from 'antd';
 import { useDispatch } from 'react-redux';
-import { createOrder } from '../../redux/CarSlice';
+import { createOrder, getCarDetails } from '../../redux/CarSlice';
 
 const CatalogueItem = ({car}) => {
 	const [isModalOpen, setIsModalOpen] = useState()
@@ -11,6 +11,7 @@ const CatalogueItem = ({car}) => {
 	const [name, setName] = useState()
 	const [phone, setPhone] = useState()
 	const [carId, setCarId] = useState()
+	
 
 
 	  const makeOrder = async () => {
@@ -60,7 +61,10 @@ const CatalogueItem = ({car}) => {
 		</div>	
 			<div className="cat_item_buttons">
 				<button className="btn_green" onClick={() => {setIsModalOpen(true); setCarId(car.id)}}>Заказать</button>
-				<Link to={`/car/:${car.id}`} style={{textDecoration: 'none', color: 'inherit', fontSize: '12px'}} className="btn_transparent" >Подробнее</Link>
+				<Link to={`/car/${car.id}`} 
+				onClick={() => dispatch(getCarDetails(car.id))}
+				style={{textDecoration: 'none', color: 'inherit', fontSize: '12px'}} 
+				className="btn_transparent" >Подробнее</Link>
 			</div>
 		</div>
 		  <Modal 
@@ -95,7 +99,6 @@ const CatalogueItem = ({car}) => {
 				<button className='modal_btn' onClick={() =>  setSecondModalOpen(false)}>Закрыть</button>
 			</div>
 		</Modal>
-
 	</div>
   )
 }

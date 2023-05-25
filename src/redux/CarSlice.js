@@ -96,6 +96,18 @@ export const createOrder = createAsyncThunk(
 	}
 )
 
+export const createFeedback = createAsyncThunk(
+	'cars/create-feedback',
+	async(params) => {
+		try {
+			const {data} = await publicRequest.post(`/feedback/`, params)
+			return data
+		} catch (error) {
+			console.log(error)
+		}
+	}
+)
+
 export const carSlice = (createSlice({
 	name: 'cars',
 	initialState,
