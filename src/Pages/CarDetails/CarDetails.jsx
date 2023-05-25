@@ -1,17 +1,38 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../../Components/Header/Header';
 import { Carousel } from 'react-responsive-carousel';
 import './CarDetails.css'
 import { Link } from 'react-router-dom';
 import CatalogueItem from '../../Components/Catalogue/CatalogueItem';
 import Footer from '../../Components/Footer/Footer';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
+import { Modal } from 'antd';
+import { createOrder } from '../../redux/CarSlice';
 
 const CarDetails = () => {
 	const car = useSelector(state => state.cars.car)
 	const similar = useSelector(state => state.cars.car.similar_cars)
+	const [isModalOpen, setIsModalOpen] = useState()
+    const [secondModalOpen, setSecondModalOpen] = useState(false);
+	const dispatch = useDispatch()
+	const [name, setName] = useState()
+	const [phone, setPhone] = useState()
+	const [carId, setCarId] = useState()
+
+	const makeOrder = async () => {
+        dispatch(createOrder(
+                {
+                   phone_number: phone,
+				   name,
+				   vehicle: carId
+                }
+        ))
+        setIsModalOpen(false);
+        setSecondModalOpen(true)
+    };
+
   return (
 	<div className='car_details'>
 		<Header />
@@ -38,7 +59,7 @@ const CarDetails = () => {
 			
 			<div className="car_details_title">{car.category.name.toUpperCase()} {car.model.toUpperCase()}</div>
 				<div className='car_header_block'>
-				<button className="order_btn">Заказать</button>
+				<button className="order_btn" onClick={() => {setIsModalOpen(true); setCarId(car.id)}}>Заказать</button>
 				<div className="car_details_price">от $ {car.price}</div>
 				<div className="car_details_note1">Стоимость рассчитывается индивидуально</div>
 			</div>
@@ -109,6 +130,39 @@ const CarDetails = () => {
 					index < 8 ?<Link to={`/car/{it.id}`} style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem car={it}/></Link> : null)
 			}
 		</div>
+
+		  <Modal 
+		    width={300}
+			height={270}
+			onCancel={() =>  setIsModalOpen(false)}
+			style={{border: '3px solid #5fa618', background: 'white'}}
+			cancelButtonProps={{style: { display: 'none' }}}
+			okButtonProps={{ style: { display: 'none' } }}
+		    title="Сделайте заказ" open={isModalOpen}>
+				<div className="modal">
+					<input type="text" placeholder='Ваше имя' onChange={(e) => setName(e.target.value)} className='input_modal'/>
+					<input type="text" placeholder='Ваш номер телефона' onChange={(e) => setPhone(e.target.value)} className='input_modal'/>
+					<button onClick={() => makeOrder()} className='modal_btn'>Отправить</button>
+				</div>
+			
+		</Modal>
+		  <Modal
+			width={350}
+			open={secondModalOpen}
+			style={{border: '2px solid #5fa618', background: 'white'}}
+			onCancel={() =>  setSecondModalOpen(false)}
+			cancelButtonProps={{style: { display: 'none' }}}
+			okButtonProps={{ style: { display: 'none' } }}
+		>
+			<div className='secondModal'>
+				<div style={{ width: '100%', display: 'flex'}}>
+					<img src='/assets/CheckCircle.svg' style={{width: '70px', height: '70px',  margin: '10px auto'}}/>
+				</div>
+				<div style={{color: 'black', textAlign: 'center'}}><strong>Спасибо за Ваш заказ!</strong> </div>
+				<div style={{ textAlign: 'center'}}>Мы перезвоним как можно скорее!</div>
+				<button className='modal_btn' onClick={() =>  setSecondModalOpen(false)}>Закрыть</button>
+			</div>
+		</Modal>
 		<Footer />
 		<ScrollToTop />
 	</div>

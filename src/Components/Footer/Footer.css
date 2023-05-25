@@ -53,10 +53,12 @@
 }
 
 .footer_header{
-  font-size: 24px;
+  font-size: 22px;
   letter-spacing: 1;
   margin: 30px 0;
   text-align: center;
+  letter-spacing: 1px;
+  line-height: 0.8;
 }
 
 .footer_text_block{
@@ -95,6 +97,7 @@
 	font-size: 18px;
 	font-weight: 600;
 	letter-spacing: 0.5px;
+
 }
 
 .footer_contacts div{
