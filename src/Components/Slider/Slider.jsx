@@ -11,8 +11,8 @@ const Slider = () => {
 		<div className="intermotors">INTER MOTORS</div>
 		<div className='slider_wrapper'>
 			<div className="left_block">
-				<div>
-					<h2>INTER MOTORS</h2>
+				<div color='slider_text_block'>
+					<h2 className='slider_header'>INTER MOTORS</h2>
 					<div className="slider_text">Профессиональный подбор и продажа автомобилей в Бишкеке</div>
 					<button className="slider_button">Подробнее</button>
 				</div>
@@ -29,7 +29,7 @@ const Slider = () => {
 						showThumbs={false} 
 						showStatus={false}
 						autoPlay={true}
-						interval={3000}
+						interval={4000}
 						infiniteLoop={true}
                         showArrows={false}
 						>	

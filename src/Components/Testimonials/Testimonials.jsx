@@ -6,7 +6,7 @@ const Testimonials = () => {
 	<div className='testimonials_wrapper'>
 		<div className="testimonials_header">Отзывы наших клиентов</div>
 		<div className="testimonials">
-			<div className="testimonial">
+			<div className="testimonial" data-aos="fade-right" data-aos-duration="2000">
 				<div className="testimonial_img_block">
 					<img src="/assets/avatar.svg" alt="" className="testimonial_img" />
 				</div>
@@ -16,7 +16,7 @@ const Testimonials = () => {
 					<div className="testimonial_description">Китайский электромобиль, который я купил, превзошел все мои ожидания. Прекрасный дизайн, передовые технологии и пожизненная гарантия от компании "INTERMOTORS" делают его лучшим выбором на рынке. Рекомендую всем!</div>
 				</div>
 			</div>
-			<div className="testimonial">
+			<div className="testimonial" data-aos="fade-left" data-aos-duration="2000">
 				<div className="testimonial_img_block">
 					<img src="/assets/avatar.svg" alt="" className="testimonial_img" />
 				</div>
@@ -26,7 +26,7 @@ const Testimonials = () => {
 					<div className="testimonial_description">Китайский электромобиль, который я купил, превзошел все мои ожидания. Прекрасный дизайн, передовые технологии и пожизненная гарантия от компании "INTERMOTORS" делают его лучшим выбором на рынке. Рекомендую всем!</div>
 				</div>
 			</div>
-			<div className="testimonial">
+			<div className="testimonial" data-aos="fade-right" data-aos-duration="2000">
 				<div className="testimonial_img_block">
 					<img src="/assets/avatar.svg" alt="" className="testimonial_img" />
 				</div>
@@ -36,7 +36,7 @@ const Testimonials = () => {
 					<div className="testimonial_description">Китайский электромобиль, который я купил, превзошел все мои ожидания. Прекрасный дизайн, передовые технологии и пожизненная гарантия от компании "INTERMOTORS" делают его лучшим выбором на рынке. Рекомендую всем!</div>
 				</div>
 			</div>
-			<div className="testimonial">
+			<div className="testimonial" data-aos="fade-left" data-aos-duration="2000">
 				<div className="testimonial_img_block">
 					<img src="/assets/avatar.svg" alt="" className="testimonial_img" />
 				</div>

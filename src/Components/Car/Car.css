@@ -1,5 +1,14 @@
 .car{
 	width: 100%;
+	min-height: 500px;
+	height: 800px;
+	background-image: url('/src/images/car.svg');
+	
+
+	 background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 
 }
 
@@ -8,3 +17,4 @@
 	height: 100%;
 	object-fit: cover;
 }
+

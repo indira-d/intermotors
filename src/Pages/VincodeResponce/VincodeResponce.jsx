@@ -39,7 +39,7 @@ const VincodeResponce = () => {
 			    carTracker.map(car => (
 				<div>
 					<div className='car_treker_top_block'>
-						<div className="car_tracker_img_block">
+						<div className="car_tracker_img_block" data-aos="fade-right" data-aos-duration='3000'>
 							<ImageGallery 
 								thumbnailPosition='right'
 								items = {[
@@ -69,15 +69,15 @@ const VincodeResponce = () => {
 								/>
 						</div>	
 
-						<div className="car_traker_details">
-								<div className="v_res_title">{selectedCar.category.name} &nbsp; {selectedCar.model}</div>
-								<div className="checkpoints">Чек-поинты:</div>
+						<div className="car_traker_details" data-aos="fade-left" data-aos-duration='3000'>
+								<div className="v_res_title" >{selectedCar.category.name} &nbsp; {selectedCar.model}</div>
+								<div className="checkpoints" data-aos-duration='500'>Чек-поинты:</div>
 
 								<div className="checkpoint_item">
 									<div className="checkpoint_subtile">Фотографии сделаны:</div>
 									<div className="checkpoint_value">{car.checkpoint_name}</div>
 								</div>
-								<div className="checkpoint_item">
+								<div className="checkpoint_item" >
 									<div className="checkpoint_subtile">Дата:</div>
 									<div className="checkpoint_value">{car.checkpoint_date}</div>
 								</div>
