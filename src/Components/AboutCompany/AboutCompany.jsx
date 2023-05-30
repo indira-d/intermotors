@@ -1,8 +1,5 @@
 import React, { useEffect} from 'react'
 import './AboutCompany.css'
-// import  {gsap}  from 'gsap'
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// gsap.registerPlugin(ScrollTrigger)
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -15,15 +12,12 @@ const AboutCompany = () => {
 	}, [])
 
 
-	
-
-
   return (
 	<div className='about'>
 		<div className="about_content">
 			<div className="about_content_left">
-				<div className="main_header" >О компании</div>
-				<div className="about_subheader" >
+				<div className="main_header">О компании</div>
+				<div className="about_subheader">
 					<div className="green_subheader">Компания</div> &nbsp;
 					<div className="bold_subheader">«InterMOTORS»</div>
 				</div>

@@ -157,3 +157,29 @@
 	background: #5fa618;
 	color: whitesmoke;
 }
+
+@media only screen and (min-width: 1400px ){
+    .req_form_title{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .req_form_subtitle{
+        font-size: 24px;
+        margin: 30px auto!important;
+    }
+
+    .req_form_input{
+        font-size: 22px !important;
+    }
+
+    .req_form_btn{
+        font-size: 18px;
+    }
+
+    .v_req_text{
+         font-size: 22px;
+    }
+
+    
+}
+

@@ -36,7 +36,7 @@ const VincodeResponce = () => {
 		<Header />
 		<div>
 			{
-			    carTracker.map(car => (
+			    carTracker?.map(car => (
 				<div>
 					<div className='car_treker_top_block'>
 						<div className="car_tracker_img_block" data-aos="fade-right" data-aos-duration='3000'>

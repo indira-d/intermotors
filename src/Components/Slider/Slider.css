@@ -34,9 +34,9 @@
 	.slider_header{
 		font-size: 2rem !important;
 	}
-		.carousel, .slider_img_block{
+		/* .carousel, .slider_img_block{
 		height: 370px !important;
-}
+} */
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1499px) {

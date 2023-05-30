@@ -27,6 +27,61 @@
 box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 }
 
+@media screen and (min-width: 1400px){
+    .h2{
+		font-size: 28px;
+	}
+
+	.brand_btn {
+		font-size: 12px !important;
+	}
+
+	.green_outlined_btn{
+		font-size: 17px !important;
+	}
+
+
+	.catalogue_item{
+		width: 300px;
+	}
+
+	.catalogue_items_block{
+		grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+
+	}
+	.cat_it_name{
+		font-size: 17px !important;
+	}
+	.cat_it_price {
+		font-size: 17px !important;
+	}
+	.cat_item_type{
+		font-size: 13px !important;
+	}
+
+	.params_header{
+		font-size: 13px !important;
+	}
+
+	.params_item_img .params_icon{
+		height: 15px !important;
+	}
+
+	.params_item{
+		font-size: 13px !important;
+	}
+
+	.cat_item_params{
+		justify-content: space-between;
+	}
+
+	.btn_green, .btn_transparent{
+		font-size: 16px !important;
+	}
+
+	
+}
+
 .catalogue_item:hover{
   scale: 1.02;
  
@@ -73,15 +128,19 @@ box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
 	font-size: 11px;
 	letter-spacing: 1px;
 	margin-top: 30px ;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
+}
+
+.cat_item_params{
+	justify-content: space-between;
 }
 
 .params_item{
 	display: flex;
 	align-items: center;
 	font-size: 10px;
-	justify-content: space-between;
-	margin: 10px 17px 0px 0;
+	margin: 5px 0;
+	
 	
 }
 

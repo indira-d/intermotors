@@ -4,12 +4,8 @@
 
 .premium_img_block{
 	width: 100%;
-	min-height: 500px;
 	height: 800px;
-	/* z-index: 0; */
-	background-image: url('/public/assets/premium.svg') ;
-
-	 background-attachment: fixed;
+	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover; 
@@ -19,6 +15,12 @@
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+}
+
+@media screen and (max-width: 800px){
+	.premium_img_block{
+				height: 350px;
+	}
 }
 
 @media screen and (max-width: 940px){
@@ -44,6 +46,21 @@
 	.premium_header{
        font-size: 24px !important;
 	}		
+}
+
+@media screen and (min-width: 1400px) {
+
+	.premium_text_block{
+		width: 50% !important;
+	}
+	.premium_header {
+       font-size: 28px !important;
+	}	
+
+	.premium_description, .premium_subheader{
+		font-size: 20px;
+	}
+
 }
 
 

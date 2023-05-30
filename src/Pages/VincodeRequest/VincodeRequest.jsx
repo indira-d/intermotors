@@ -7,9 +7,6 @@ import { findCarByVincode } from '../../redux/CarSlice'
 import { useNavigate } from "react-router-dom";
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop'
 
-
-
-
 const VincodeRequest = () => {
 	const [vincode, setVincode] = useState()
 	const dispatch = useDispatch()

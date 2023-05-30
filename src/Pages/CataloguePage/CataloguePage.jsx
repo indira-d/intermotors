@@ -37,6 +37,7 @@ const CataloguePage = () => {
 								style={{ height: '100%' }}
 								items={items1}
 								onClick={(e) => dispatch(filterByBrand(e.key))}
+								className='filter_item'
 							/>
 						</Sider>
 				</div>
