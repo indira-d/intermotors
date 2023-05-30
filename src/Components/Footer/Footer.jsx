@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import './Footer.css'
 import { FacebookOutlined, InstagramOutlined, WhatsAppOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { createFeedback } from '../../redux/CarSlice'
 import { Modal } from 'antd';
 
 const Footer = () => {
+	const contacts = useSelector(state => state.cars.contacts)
+		
 	const [name, setName] = useState('')
 	const [phone, setPhone] = useState('')
 	const [message, setMessage] = useState('')
@@ -39,21 +41,28 @@ const Footer = () => {
 			<div>
 				<div className="footer_content">
 				<div className="footer_contacts"  data-aos="fade-right" data-aos-duration="3000">
-					 <div className="contacts_header">Контакты</div>
-					 <div className="contact_item">
-						<div className="contact_title">Email:</div>
-						<div className="contact_value">sales@inter-motors.co</div>
-					 </div>
-					 <div className="contact_item">
-						<div className="contact_title">Телефон:</div>
-						<div className="contact_value">+996 702 744 444</div>
-					 </div>
-					 <div className="social_networks_icons">		
-						<Link to='https://www.instagram.com/inter_motors.kg/'><InstagramOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon' data-aos="zoom-in-down" data-aos-duration="1000"/></Link>
-						<Link to='https://wa.me/996702744444'><WhatsAppOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon' data-aos="zoom-in-down" data-aos-duration="2000"/></Link>
-						<Link to='https://www.facebook.com/people/Кылымбек-Кудайбердиев/pfbid02qfh2V5aKvvYWxe4aNzhReHQHCy5x7iwuVdUQD2bX7r9gEziKS4YKbHedo5ThAswMl/'><FacebookOutlined className='network_icon'  style={{ color: 'white'}} data-aos="zoom-in-down" data-aos-duration="3000"/></Link>
-					</div>				
-				</div>
+					{
+						contacts.map(it => (
+							<div>
+								<div className="contacts_header">Контакты</div>
+								<div className="contact_item">
+									<div className="contact_title">Email:</div>
+									<div className="contact_value">{it.email}</div>
+								</div>
+								<div className="contact_item">
+									<div className="contact_title">Телефон:</div>
+									<div className="contact_value">{it.phone}</div>
+								</div>
+								<div className="social_networks_icons">		
+									<Link to={`${it.instagram}`}><InstagramOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon' data-aos="zoom-in-down" data-aos-duration="1000"/></Link>
+									<Link to={`${it.whatsapp}`}><WhatsAppOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon' data-aos="zoom-in-down" data-aos-duration="2000"/></Link>
+									<Link to={`${it.facebook}`}><FacebookOutlined className='network_icon'  style={{ color: 'white'}} data-aos="zoom-in-down" data-aos-duration="3000"/></Link>
+								</div>				
+							</div>
+						))
+					}
+					</div>
+					 
 				<div className="footer_form" data-aos="fade-left" data-aos-duration="3000">
 					<input type="text" 
 					       className="name" 
@@ -101,6 +110,7 @@ const Footer = () => {
 			</div>
 		</Modal>
 	</div>
+	
   )
 }
 

@@ -4,24 +4,36 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { FacebookOutlined, InstagramOutlined, WhatsAppOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-const Slider = () => {
+const Slider = ({executeScroll}) => {
+	const contacts = useSelector(state => state.cars.contacts)
+	const sliderData = useSelector(state => state.cars.sliderData)
   return (
 	<div className="slider">
 		<div className="intermotors">INTER MOTORS</div>
 		<div className='slider_wrapper'>
-			<div className="left_block">
-				<div color='slider_text_block'>
-					<h2 className='slider_header'>INTER MOTORS</h2>
-					<div className="slider_text">Профессиональный подбор и продажа автомобилей в Бишкеке</div>
-					<button className="slider_button">Подробнее</button>
-				</div>
-				<div className="social_networks">
-					<Link to='https://www.instagram.com/inter_motors.kg/'><InstagramOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
-					<Link to='https://wa.me/996702744444'><WhatsAppOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
-					<Link to='https://www.facebook.com/people/Кылымбек-Кудайбердиев/pfbid02qfh2V5aKvvYWxe4aNzhReHQHCy5x7iwuVdUQD2bX7r9gEziKS4YKbHedo5ThAswMl/'><FacebookOutlined className='network_icon'  style={{ color: 'white'}}/></Link>
-				</div>
-			</div>
+			{
+				sliderData.map(it => (
+					<div className="left_block">
+						<div color='slider_text_block'>
+							<h2 className='slider_header'>{it.title1}</h2>
+							<div className="slider_text">{it.description1}</div>
+							<button className="slider_button" onClick={() => executeScroll()}>Подробнее</button>
+						</div>
+						{
+							contacts.map(it => (
+								<div className="social_networks">
+									<Link to={`${it.instagram}`}><InstagramOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
+									<Link to={`${it.whatsapp}`}><WhatsAppOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
+									<Link to={`${it.facebook}`}><FacebookOutlined className='network_icon'  style={{ color: 'white'}}/></Link>
+								</div>
+							))
+						}
+					</div>
+						))
+			}
+			
 			<div className="right_block">
 				<div className="carousel">
 					<Carousel 

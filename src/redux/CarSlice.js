@@ -7,7 +7,9 @@ const initialState = {
 	sliderData: [],
 	loading: false,
 	categories: [],
-	carTraker: []
+	carTraker: [],
+	testimonials: [],
+	contacts: []
 }
 
 
@@ -108,6 +110,33 @@ export const createFeedback = createAsyncThunk(
 	}
 )
 
+
+export const getTestimonials = createAsyncThunk(
+	'cars/testimonials',
+	async() => {
+		try {
+			const {data} = await publicRequest.get(`/client-feedback/`)
+			return data
+		} catch (error) {
+			console.log(error)
+		}
+	}
+)
+
+export const getContacts = createAsyncThunk(
+	'cars/contacts',
+	async() => {
+		try {
+			const {data} = await publicRequest.get(`/contacts/`)
+			return data
+		} catch (error) {
+			console.log(error)
+		}
+	}
+)
+
+
+
 export const carSlice = (createSlice({
 	name: 'cars',
 	initialState,
@@ -182,6 +211,30 @@ export const carSlice = (createSlice({
 				state.loading =  false
 			}) 
 			.addCase(findCarByVincode.rejected, state => {
+				state.loading =  false
+			}) 
+
+
+			.addCase(getTestimonials.pending, state => {
+				state.loading =  true
+			}) 
+			.addCase(getTestimonials.fulfilled, (state, action) => {
+				state.testimonials = action.payload
+				state.loading =  false
+			}) 
+			.addCase(getTestimonials.rejected, state => {
+				state.loading =  false
+			}) 
+
+
+			.addCase(getContacts.pending, state => {
+				state.loading =  true
+			}) 
+			.addCase(getContacts.fulfilled, (state, action) => {
+				state.contacts = action.payload
+				state.loading =  false
+			}) 
+			.addCase(getContacts.rejected, state => {
 				state.loading =  false
 			}) 
 	}
