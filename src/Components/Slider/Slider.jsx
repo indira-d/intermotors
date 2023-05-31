@@ -13,15 +13,15 @@ const Slider = ({executeScroll}) => {
 	<div className="slider">
 		<div className="intermotors">INTER MOTORS</div>
 		<div className='slider_wrapper'>
-					<div className="left_block">
+					<div className="left_block"> 
 						<div color='slider_text_block'>
 							<h2 className='slider_header'>{sliderData[0]?.title}</h2>
 							<div className="slider_text">{sliderData[0]?.description}</div>
 							<button className="slider_button" onClick={() => executeScroll()}>Подробнее</button>
 						</div>
 						{
-							contacts.map(it => (
-								<div className="social_networks">
+							contacts?.map((it, index) => (
+								<div className="social_networks" key={index}>
 									<Link to={`${it?.instagram}`}><InstagramOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
 									<Link to={`${it?.whatsapp}`}><WhatsAppOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
 									<Link to={`${it?.facebook}`}><FacebookOutlined className='network_icon'  style={{ color: 'white'}}/></Link>
@@ -42,10 +42,10 @@ const Slider = ({executeScroll}) => {
                         showArrows={false}
 						>
 						{
-							sliderData.map(it => (
-								<div className='slider_img_block'>
-							<img src={it?.image} className='slider_img' />
-						</div>
+							sliderData?.map((it, index) => (
+								<div className='slider_img_block' key={index}>
+									<img src={it?.image} className='slider_img' />
+								</div>
 							))
 						}
 					</Carousel>
