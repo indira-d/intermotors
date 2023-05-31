@@ -46,7 +46,20 @@
 		background: #eee;
 		width: 130px;	
 	}
+}
 
+@media only screen and (min-width: 1400px ){
+	.catalogue_main{
+		grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+	}
+
+	.category_filtr{
+      font-size: 24px;	 
+	}
+
+	.ant-menu-title-content{
+		font-size: 18px;
+	}
 	
 }
 
@@ -59,7 +72,7 @@
 
 .catalogue_main{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
 	gap: 3rem;
 	padding: 30px;
 }

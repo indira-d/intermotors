@@ -8,6 +8,7 @@ import Footer from '../../Components/Footer/Footer';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterByBrand, getCarDetails } from '../../redux/CarSlice';
+import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
 
 
 const CataloguePage = () => {
@@ -24,7 +25,7 @@ const CataloguePage = () => {
 	<div className='catalogue_page'>
 		<Header />
 		<div className="catalogue_banner">
-			<img src="/assets/banner.svg" alt="" className="banner_img" />
+			<img src="/assets/banner.svg" alt="" className="banner_img" data-aos="zoom-out" data-aos-duration='3000'/>
 			<div className="catalogue_main_content">
 				<div className="catalogue_sidebar">
 					<div className="category_filtr">Фильтр</div>
@@ -36,6 +37,7 @@ const CataloguePage = () => {
 								style={{ height: '100%' }}
 								items={items1}
 								onClick={(e) => dispatch(filterByBrand(e.key))}
+								className='filter_item'
 							/>
 						</Sider>
 				</div>
@@ -51,6 +53,7 @@ const CataloguePage = () => {
 			</div>
 		</div>
 		<Footer />
+		<ScrollToTop />
 	</div>
   )
 }

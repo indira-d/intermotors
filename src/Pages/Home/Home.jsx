@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Header from '../../Components/Header/Header'
 import Slider from '../../Components/Slider/Slider'
 import Catalogue from '../../Components/Catalogue/Catalogue'
@@ -7,25 +7,35 @@ import Premium from '../../Components/Premium/Premium'
 import Car from '../../Components/Car/Car'
 import Testimonials from '../../Components/Testimonials/Testimonials'
 import Footer from '../../Components/Footer/Footer'
-import { getCars, getCategories, getSliderData } from '../../redux/CarSlice'
+import { getCars, getCategories, getContacts, getSliderData, getTestimonials } from '../../redux/CarSlice'
 import { useDispatch } from 'react-redux'
 import './Home.css'
 
 const Home = () => {
 	const dispatch = useDispatch()
+	const myRef = useRef(null)
 
   useEffect(() => {
 	dispatch(getCars())
 	dispatch(getSliderData())
 	dispatch(getCategories())
+	dispatch(getTestimonials())
+	dispatch(getContacts())
   }, [dispatch])
+
+   const executeScroll = () => {
+	console.log('test')
+	myRef.current.scrollIntoView()
+   }
 
   return (
 	<div className='home'>
 		<Header/>
-		<Slider />
+		<Slider executeScroll={executeScroll}/>
 		<Catalogue />
-		<AboutCompany />
+		<div ref={myRef}>
+			<AboutCompany ref={myRef}/>
+		</div>
 		<Premium />
 		<Car />
 		<Testimonials />

@@ -4,7 +4,7 @@ import './Car.css'
 const Car = () => {
   return (
 	<div className='car'>
-		<img src="/assets/car.svg" alt="" className='car_img'/>
+		{/* <img src="/assets/car.svg" alt="" className='car_img'/> */}
 	</div>
   )
 }

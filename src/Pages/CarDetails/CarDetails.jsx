@@ -43,13 +43,13 @@ const CarDetails = () => {
 					showIndicators={false}
 					showArrows={false}
 					>	
-						<div className='slider_img_block'>
-							<img src="/assets/car1.svg" className='slider_img' />
-						</div>
-						<div className='slider_img_block'>
-							<img src="/assets/car2.svg" className='slider_img'/>
-						</div>
-					
+					{
+						car.images.map(it => (
+							<div className='slider_img_block'>
+								<img src={`${it.image}`} className='slider_img' />
+							</div>
+						))
+					}				
             </Carousel>
 			
 		</div>

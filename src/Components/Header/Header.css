@@ -7,10 +7,20 @@
 	justify-content: space-between;
 }
 
+@media screen and (max-width: 550px){
+	.logo{
+	margin: 0 20px !important;
+	height: 65px !important;
+	width: 130px !important;
+
+	
+}
+}
+
 .logo{
 	margin: 0 50px;
-	height: 60px;
-	width: 120px;
+	height: 80px;
+	width: 150px;
 	
 }
 

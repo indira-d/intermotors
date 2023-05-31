@@ -79,6 +79,36 @@
     }
 }
 
+@media screen and (min-width: 1400px){
+	.car_traker_description{
+		font-size: 22px;
+	}
+
+	.car_traker_description h2{
+		font-size: 28px !important;
+	}
+
+	.checkpoint_item{
+		font-size: 18px;
+	}
+
+	.v_res_title{
+		font-size: 28px !important;
+	}
+	.checkpoints{
+		font-size: 20px;
+	}
+
+	.checkpoint_subtile{
+		font-size: 20px !important;
+		margin: 10px 0;
+	}
+
+	.checkpoint_value{
+		font-size: 22px;
+	}
+}
+
 .image-gallery-slides{
    margin: 0 auto;
 }

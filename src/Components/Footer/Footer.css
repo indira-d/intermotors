@@ -163,3 +163,29 @@ textarea{
   scale: 1.2;
   color: #5fa618;
 }
+
+@media screen and (min-width: 1400px) {
+	.footer_header{
+		font-size: 28px;
+	}
+
+	.contacts_header{
+		font-size: 22px;
+	}
+
+	.contact_item{
+		font-size: 20px;
+	}
+
+	.network_icon{
+		font-size: 20px;
+	}
+
+	.bottom_footer{
+		font-size:15px ;
+	}
+
+	.footer_form input, .footer_form textarea{
+		font-size: 18px !important;
+	}
+}

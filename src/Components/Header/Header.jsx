@@ -6,7 +6,7 @@ const Header = () => {
   return (
 	<div className='header'>
 		<Link to='/' className="logo" style={{textDecoration:'none'}}>
-			<img src='/assets/logo.svg' alt='' className='logo_img'/>
+			<img src='/assets/logo.svg' alt='' className='logo_img'  />
 		</Link>
         <Link to={'/vincode-request'}
               style={{textDecoration: 'none'}}
