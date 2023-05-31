@@ -34,7 +34,7 @@ const Home = () => {
 		<Slider executeScroll={executeScroll}/>
 		<Catalogue />
 		<div ref={myRef}>
-			<AboutCompany ref={myRef}/>
+			<AboutCompany/>
 		</div>
 		<Premium />
 		<Car />

@@ -38,6 +38,7 @@ const Catalogue = () => {
 				cars?.map((car, index) => (
 					index < 12 ?
 						<CatalogueItem
+						    key={index}
 							car={car}
 							onClick={() => dispatch(getCarDetails(car.id))}
 						/>
