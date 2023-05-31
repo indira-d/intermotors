@@ -47,16 +47,16 @@ const Footer = () => {
 								<div className="contacts_header">Контакты</div>
 								<div className="contact_item">
 									<div className="contact_title">Email:</div>
-									<div className="contact_value">{it.email}</div>
+									<div className="contact_value">{it?.email}</div>
 								</div>
 								<div className="contact_item">
 									<div className="contact_title">Телефон:</div>
-									<div className="contact_value">{it.phone}</div>
+									<div className="contact_value">{it?.phone}</div>
 								</div>
 								<div className="social_networks_icons">		
-									<Link to={`${it.instagram}`}><InstagramOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon' data-aos="zoom-in-down" data-aos-duration="1000"/></Link>
-									<Link to={`${it.whatsapp}`}><WhatsAppOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon' data-aos="zoom-in-down" data-aos-duration="2000"/></Link>
-									<Link to={`${it.facebook}`}><FacebookOutlined className='network_icon'  style={{ color: 'white'}} data-aos="zoom-in-down" data-aos-duration="3000"/></Link>
+									<Link to={`${it?.instagram}`}><InstagramOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon' data-aos="zoom-in-down" data-aos-duration="1000"/></Link>
+									<Link to={`${it?.whatsapp}`}><WhatsAppOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon' data-aos="zoom-in-down" data-aos-duration="2000"/></Link>
+									<Link to={`${it?.facebook}`}><FacebookOutlined className='network_icon'  style={{ color: 'white'}} data-aos="zoom-in-down" data-aos-duration="3000"/></Link>
 								</div>				
 							</div>
 						))

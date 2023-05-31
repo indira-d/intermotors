@@ -13,28 +13,22 @@ const Slider = ({executeScroll}) => {
 	<div className="slider">
 		<div className="intermotors">INTER MOTORS</div>
 		<div className='slider_wrapper'>
-			
-				
 					<div className="left_block">
-						
 						<div color='slider_text_block'>
-							<h2 className='slider_header'>{sliderData[0].title}</h2>
-							<div className="slider_text">{sliderData[0].description}</div>
+							<h2 className='slider_header'>{sliderData[0]?.title}</h2>
+							<div className="slider_text">{sliderData[0]?.description}</div>
 							<button className="slider_button" onClick={() => executeScroll()}>Подробнее</button>
 						</div>
-						
 						{
 							contacts.map(it => (
 								<div className="social_networks">
-									<Link to={`${it.instagram}`}><InstagramOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
-									<Link to={`${it.whatsapp}`}><WhatsAppOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
-									<Link to={`${it.facebook}`}><FacebookOutlined className='network_icon'  style={{ color: 'white'}}/></Link>
+									<Link to={`${it?.instagram}`}><InstagramOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
+									<Link to={`${it?.whatsapp}`}><WhatsAppOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
+									<Link to={`${it?.facebook}`}><FacebookOutlined className='network_icon'  style={{ color: 'white'}}/></Link>
 								</div>
 							))
 						}
 					</div>
-						
-			
 			
 			<div className="right_block">
 				<div className="carousel">
@@ -46,29 +40,18 @@ const Slider = ({executeScroll}) => {
 						interval={4000}
 						infiniteLoop={true}
                         showArrows={false}
-						>	
-
+						>
 						{
 							sliderData.map(it => (
 								<div className='slider_img_block'>
-							<img src={it.image} className='slider_img' />
+							<img src={it?.image} className='slider_img' />
 						</div>
 							))
 						}
-{/* 						
-						<div className='slider_img_block'>
-							<img src="/assets/car2.svg" className='slider_img'/>
-						</div>
-						<div className='slider_img_block'>
-							<img src="/assets/car1.svg" className='slider_img' />
-						</div> */}
 					</Carousel>
 				</div>
 			</div>
 		</div>
-		
-		
-		
 	</div>
   )
 }
