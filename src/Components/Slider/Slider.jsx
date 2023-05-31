@@ -13,14 +13,16 @@ const Slider = ({executeScroll}) => {
 	<div className="slider">
 		<div className="intermotors">INTER MOTORS</div>
 		<div className='slider_wrapper'>
-			{
-				sliderData.map(it => (
+			
+				
 					<div className="left_block">
+						
 						<div color='slider_text_block'>
-							<h2 className='slider_header'>{it.title1}</h2>
-							<div className="slider_text">{it.description1}</div>
+							<h2 className='slider_header'>{sliderData[0].title}</h2>
+							<div className="slider_text">{sliderData[0].description}</div>
 							<button className="slider_button" onClick={() => executeScroll()}>Подробнее</button>
 						</div>
+						
 						{
 							contacts.map(it => (
 								<div className="social_networks">
@@ -31,8 +33,8 @@ const Slider = ({executeScroll}) => {
 							))
 						}
 					</div>
-						))
-			}
+						
+			
 			
 			<div className="right_block">
 				<div className="carousel">
@@ -45,15 +47,21 @@ const Slider = ({executeScroll}) => {
 						infiniteLoop={true}
                         showArrows={false}
 						>	
-						<div className='slider_img_block'>
-							<img src="/assets/car1.svg" className='slider_img' />
+
+						{
+							sliderData.map(it => (
+								<div className='slider_img_block'>
+							<img src={it.image} className='slider_img' />
 						</div>
+							))
+						}
+{/* 						
 						<div className='slider_img_block'>
 							<img src="/assets/car2.svg" className='slider_img'/>
 						</div>
 						<div className='slider_img_block'>
 							<img src="/assets/car1.svg" className='slider_img' />
-						</div>
+						</div> */}
 					</Carousel>
 				</div>
 			</div>
