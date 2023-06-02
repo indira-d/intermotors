@@ -164,7 +164,7 @@ textarea{
   color: #5fa618;
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1500px) {
 	.footer_header{
 		font-size: 28px;
 	}

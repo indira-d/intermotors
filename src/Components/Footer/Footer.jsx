@@ -42,7 +42,7 @@ const Footer = () => {
 				<div className="footer_content">
 				<div className="footer_contacts"  data-aos="fade-right" data-aos-duration="3000">
 					{
-						contacts.map((it, index) => (
+						contacts?.map((it, index) => (
 							<div key={index}>
 								<div className="contacts_header">Контакты</div>
 								<div className="contact_item">
