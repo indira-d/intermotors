@@ -42,7 +42,7 @@ const Slider = ({executeScroll}) => {
                         showArrows={false}
 						>
 						{
-							sliderData?.map((it, index) => (
+							sliderData?.main_slider_images?.map((it, index) => (
 								<div className='slider_img_block' key={index}>
 									<img src={it?.image} className='slider_img' />
 								</div>
