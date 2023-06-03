@@ -13,7 +13,7 @@ import { createOrder } from '../../redux/CarSlice';
 
 const CarDetails = () => {
 	const car = useSelector(state => state.cars.car)
-	const similar = useSelector(state => state.cars.car.similar_cars)
+	const similar = useSelector(state => state.cars.car?.similar_cars)
 	const [isModalOpen, setIsModalOpen] = useState()
     const [secondModalOpen, setSecondModalOpen] = useState(false);
 	const dispatch = useDispatch()
@@ -126,7 +126,7 @@ const CarDetails = () => {
 		<div className="similar_cars">
 			{
 				similar?.map((it, index) => 
-					index < 8 ?<Link to={`/car/{it.id}`} style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem car={it}/></Link> : null)
+					index < 8 ?<Link to={`/car/${it?.id}`} style={{textDecoration: 'none', color: 'inherit'}}><CatalogueItem car={it}/></Link> : null)
 			}
 		</div>
 
