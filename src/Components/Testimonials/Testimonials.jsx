@@ -15,7 +15,7 @@ const Testimonials = () => {
 				    data-aos={ index % 2 === 0 ? "fade-right" : "fade-left"} 
 					data-aos-duration="2000">
 					<div className="testimonial_img_block">
-						<img src="/assets/avatar.svg" alt="" className="testimonial_img" />
+						<img src={it?.image} alt="" className="testimonial_img" />
 					</div>
 					<div className="testimonial_text">
 						<div className="testimonial_name">{it.fullname}</div>

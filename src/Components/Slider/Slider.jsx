@@ -15,8 +15,8 @@ const Slider = ({executeScroll}) => {
 		<div className='slider_wrapper'>
 					<div className="left_block"> 
 						<div color='slider_text_block'>
-							<h2 className='slider_header'>{sliderData[0]?.title}</h2>
-							<div className="slider_text">{sliderData[0]?.description}</div>
+							<h2 className='slider_header'>{sliderData?.title}</h2>
+							<div className="slider_text">{sliderData?.description}</div>
 							<button className="slider_button" onClick={() => executeScroll()}>Подробнее</button>
 						</div>
 						{
