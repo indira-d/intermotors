@@ -44,9 +44,9 @@ const CarDetails = () => {
 					showArrows={false}
 					>	
 					{
-						car.images.map(it => (
+						car?.images?.map(it => (
 							<div className='slider_img_block'>
-								<img src={`${it.image}`} className='slider_img' />
+								<img src={`${it?.image}`} className='slider_img' />
 							</div>
 						))
 					}				
@@ -56,11 +56,10 @@ const CarDetails = () => {
 	
 	  <div className="car_details_dark">
 		<div className="car_details_header">
-			
-			<div className="car_details_title">{car.category.name.toUpperCase()} {car.model.toUpperCase()}</div>
+			<div className="car_details_title">{car?.category?.name.toUpperCase()} {car?.model?.toUpperCase()}</div>
 				<div className='car_header_block'>
-				<button className="order_btn" onClick={() => {setIsModalOpen(true); setCarId(car.id)}}>Заказать</button>
-				<div className="car_details_price">от $ {car.price}</div>
+				<button className="order_btn" onClick={() => {setIsModalOpen(true); setCarId(car?.id)}}>Заказать</button>
+				<div className="car_details_price">от $ {car?.price}</div>
 				<div className="car_details_note1">Стоимость рассчитывается индивидуально</div>
 			</div>
 			<div className="car_details_note2">Не является публичной офертой.</div>
@@ -69,7 +68,7 @@ const CarDetails = () => {
 			<div className="params_left">
 				<div className="car_params_item">
 					<div className="params_title">Год выпуска:</div>
-					<div className="params_value">{car.production_year}</div>
+					<div className="params_value">{car?.production_year}</div>
 				</div>
 
 				<div className="car_params_item">
@@ -86,30 +85,30 @@ const CarDetails = () => {
 				</div>
 				<div className="car_params_item">
 					<div className="params_title">Колесная база:</div>
-					<div className="params_value">{car.wheelbase}</div>
+					<div className="params_value">{car?.wheelbase}</div>
 				</div>
 			</div>
 
 			<div className="params_right">
 				<div className="car_params_item">
 					<div className="params_title"> Мощность:</div>
-					<div className="params_value">{car.power}</div>
+					<div className="params_value">{car?.power}</div>
 				</div>
 				<div className="car_params_item">
 					<div className="params_title"> Привод:</div>
-					<div className="params_value">{car.drive_type}</div>
+					<div className="params_value">{car?.drive_type}</div>
 				</div>
 				<div className="car_params_item">
 					<div className="params_title"> Размеры авто:</div>
-					<div className="params_value">{car.dimensions}</div>
+					<div className="params_value">{car?.dimensions}</div>
 				</div>
 				<div className="car_params_item">
 					<div className="params_title"> Максимальная скорость:</div>
-					<div className="params_value">{car.top_speed}</div>
+					<div className="params_value">{car?.top_speed}</div>
 				</div>
 				<div className="car_params_item">
 					<div className="params_title"> Vin code:</div>
-					<div className="params_value">{car.vincode}</div>
+					<div className="params_value">{car?.vincode}</div>
 				</div>
 			</div>
 			</div>
