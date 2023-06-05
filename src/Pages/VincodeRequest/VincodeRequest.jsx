@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './VincodeResponce.css'
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
@@ -6,11 +6,18 @@ import { useDispatch } from 'react-redux'
 import { findCarByVincode } from '../../redux/CarSlice'
 import { useNavigate } from "react-router-dom";
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop'
+import  AOS  from 'aos'
 
 const VincodeRequest = () => {
 	const [vincode, setVincode] = useState()
 	const dispatch = useDispatch()
     let navigate = useNavigate();
+
+	useEffect(() => {
+		 AOS.init({
+			 delay: 100,
+		 });  
+	}, [])
 
 	const findCar = () => {
 		dispatch(findCarByVincode(vincode))
