@@ -1,13 +1,19 @@
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import Footer from '../../Components/Footer/Footer'
 import Header from '../../Components/Header/Header'
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 import './VincodeResponce.css'
+import AOS from 'aos'
 
 const VincodeResponce = () => {
+	useEffect(() => {
+		 AOS.init({
+			 delay: 100,
+		 });  
+	}, [])
 	const carTracker = useSelector(state => state.cars.carTraker)
 	const selectedCar = useSelector(state => state.cars.car)
 

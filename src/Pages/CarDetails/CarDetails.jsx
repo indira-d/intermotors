@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../../Components/Header/Header';
 import { Carousel } from 'react-responsive-carousel';
 import './CarDetails.css'
@@ -10,8 +10,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
 import { Modal } from 'antd';
 import { createOrder } from '../../redux/CarSlice';
+import  AOS  from 'aos';
 
 const CarDetails = () => {
+
+
 	const car = useSelector(state => state.cars.car)
 	const similar = useSelector(state => state.cars.car?.similar_cars)
 	const [isModalOpen, setIsModalOpen] = useState()
@@ -20,6 +23,12 @@ const CarDetails = () => {
 	const [name, setName] = useState()
 	const [phone, setPhone] = useState()
 	const [carId, setCarId] = useState()
+
+	useEffect(() => {
+		 AOS.init({
+			 delay: 100,
+		 });  
+	}, [])
 
 	const makeOrder = async () => {
         dispatch(createOrder(
