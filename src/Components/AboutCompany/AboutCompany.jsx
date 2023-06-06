@@ -22,7 +22,7 @@ const AboutCompany = () => {
 					<div className="bold_subheader">«InterMOTORS»</div>
 				</div>
 					<div className="about_description" >Компания «InterMOTORS» предоставляет услуги по поставке электромобилей из Китая в Кыргызстан и Россию, а также по странам СНГ. Мы являемся молодой компанией в этом направлении, но уже многие годы мы занимаемся логистическими операциями. Китайские заводы являются одними из лучших в мире по производству электрокаров. У нас есть специальная команда профессионалов в Китае базирующаяся в четырех провинциях (Ухань, Гуанжоу, Чиньдау, Ханжоу) мы вместе с командой с радостью подберем для Вас лучший вариант!</div>
-				    <button className="about_btn" data-aos="zoom-in" data-aos-duration='2000'>Oб электромобилях</button>
+				    <button className="about_btn" data-aos="zoom-in" data-aos-duration='1000'>Oб электромобилях</button>
 			</div>
 
 			<div className="about_content_right">
@@ -35,7 +35,7 @@ const AboutCompany = () => {
 		<div className="about_content_bottom">
 			<div className="about_bottom_item"  data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
 				<div className="about_bottom_img_block">
-					<img src="/assets/icon1.svg" alt="" className="about_icon" />
+					<img src="https://api.inter-motors.co/media/images/additional/Icon1.svg" alt="" className="about_icon" />
 				</div>
 				<div className="about_icons_subheader">
 					Грамотность
@@ -46,7 +46,7 @@ const AboutCompany = () => {
 			</div>
 			<div className="about_bottom_item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
 				<div className="about_bottom_img_block">
-					<img src="/assets/icon2.svg" alt="" className="about_icon" />
+					<img src="https://api.inter-motors.co/media/images/additional/Icon2.svg" alt="" className="about_icon" />
 				</div>
 				<div className="about_icons_subheader">
 					Бесплатная консультация 
@@ -57,7 +57,7 @@ const AboutCompany = () => {
 			</div>
 			<div className="about_bottom_item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
 				<div className="about_bottom_img_block">
-					<img src="/assets/icon4.svg" alt="" className="about_icon" />
+					<img src="https://api.inter-motors.co/media/images/additional/Icon4.svg" alt="" className="about_icon" />
 				</div>
 				<div className="about_icons_subheader">
 					Надежность
@@ -68,7 +68,7 @@ const AboutCompany = () => {
 			</div>
 			<div className="about_bottom_item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2500">
 				<div className="about_bottom_img_block">
-					<img src="/assets/icon3.svg" alt="" className="about_icon" />
+					<img src="https://api.inter-motors.co/media/images/additional/Icon3.svg" alt="" className="about_icon" />
 				</div>
 				<div className="about_icons_subheader">
 					Быстрота

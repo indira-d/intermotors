@@ -139,15 +139,22 @@ const CarDetails = () => {
 			}
 		</div>
 
-		  <Modal 
-		    width={300}
-			height={270}
+		   <Modal 
+		    width={600}
+			height={400}
 			onCancel={() =>  setIsModalOpen(false)}
-			style={{border: '3px solid #5fa618', background: 'white'}}
-			cancelButtonProps={{style: { display: 'none' }}}
+			style={{border: '3px solid #5fa618', borderRadius: '10px'}}
+			cancelButtonProps={{style: { display: 'none', color: 'whitesmoke' }}}
 			okButtonProps={{ style: { display: 'none' } }}
-		    title="Сделайте заказ" open={isModalOpen}>
+			className='modal'
+		 
+			open={isModalOpen}>
 				<div className="modal">
+					<div className="modal_logo">
+						<img src='/assets/logo.svg' className='modal_logo_img'/>
+					</div>
+					<div className="modal_title"> ОФОРМИТЕ ЗАКАЗ</div>
+					<div className='modal_description'>Оставьте Ваши данные, мы позвоним для уточнения деталий и поможем сделать лучший выбор!</div>
 					<input type="text" placeholder='Ваше имя' onChange={(e) => setName(e.target.value)} className='input_modal'/>
 					<input type="text" placeholder='Ваш номер телефона' onChange={(e) => setPhone(e.target.value)} className='input_modal'/>
 					<button onClick={() => makeOrder()} className='modal_btn'>Отправить</button>

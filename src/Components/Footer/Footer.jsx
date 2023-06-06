@@ -37,10 +37,10 @@ const Footer = () => {
 			<img src="/assets/footer.svg" alt="" className="footer_img" />
 		</div>
 		<div className="footer_text_block">
-			<div className="footer_header" data-aos="fade-down" data-aos-duration="3000" >ОБРАТНАЯ СВЯЗЬ</div>
+			<div className="footer_header" data-aos="fade-down" data-aos-duration="1000" >ОБРАТНАЯ СВЯЗЬ</div>
 			<div>
 				<div className="footer_content">
-				<div className="footer_contacts"  data-aos="fade-right" data-aos-duration="3000">
+				<div className="footer_contacts"  data-aos="fade-right" data-aos-duration="1000">
 					{
 						contacts?.map((it, index) => (
 							<div key={index}>
@@ -55,15 +55,15 @@ const Footer = () => {
 								</div>
 								<div className="social_networks_icons">		
 									<Link to={`${it?.instagram}`}><InstagramOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon' data-aos="zoom-in-down" data-aos-duration="1000"/></Link>
-									<Link to={`${it?.whatsapp}`}><WhatsAppOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon' data-aos="zoom-in-down" data-aos-duration="2000"/></Link>
-									<Link to={`${it?.facebook}`}><FacebookOutlined className='network_icon'  style={{ color: 'white'}} data-aos="zoom-in-down" data-aos-duration="3000"/></Link>
+									<Link to={`${it?.whatsapp}`}><WhatsAppOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon' data-aos="zoom-in-down" data-aos-duration="1500"/></Link>
+									<Link to={`${it?.facebook}`}><FacebookOutlined className='network_icon'  style={{ color: 'white'}} data-aos="zoom-in-down" data-aos-duration="2000"/></Link>
 								</div>				
 							</div>
 						))
 					}
 					</div>
 					 
-				<div className="footer_form" data-aos="fade-left" data-aos-duration="3000">
+				<div className="footer_form" data-aos="fade-left" data-aos-duration="1000">
 					<input type="text" 
 					       className="name" 
 						   placeholder='Ваше имя' 
@@ -83,11 +83,12 @@ const Footer = () => {
 						   value={message}
 						   placeholder='Сообщение' 
 						   onChange={(e) => setMessage(e.target.value)}></textarea>
-					<button className="submit_btn" onClick={sendFeedback} data-aos="zoom-in" data-aos-duration="2000">Отправить</button>
+					<button className="submit_btn" onClick={sendFeedback} data-aos="zoom-in" data-aos-duration="1000">Отправить</button>
 				</div>
 			</div>
 			</div>
 		</div>
+	
 		<div className="bottom_footer">
 			<div>ОсОО “Inter Motors”</div>
 			<div>Все права защищены</div>

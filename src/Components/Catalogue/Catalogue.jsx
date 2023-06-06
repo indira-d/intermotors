@@ -16,12 +16,12 @@ const Catalogue = () => {
 
   return (
 	<div className='catalogue'>
-	  <h2 className='h2' data-aos="fade-down" data-aos-duration='2000'>Каталог машин</h2>
+	  <h2 className='h2' data-aos="fade-down" data-aos-duration='1000'>Каталог машин</h2>
 		<div className="catalogue_filter">
 			<div className='btn_wrapper'>
-				<Link to='/catalogue' className="green_outlined_btn" style={{textDecoration: 'none'}} data-aos="fade-right" data-aos-duration='2000'>Посмотреть каталог</Link>
+				<Link to='/catalogue' className="green_outlined_btn" style={{textDecoration: 'none'}} data-aos="fade-right" data-aos-duration='1000'>Посмотреть каталог</Link>
 			</div>
-			<div className="filter_block" data-aos="fade-left" data-aos-duration='3000'>
+			<div className="filter_block" data-aos="fade-left" data-aos-duration='1000'>
 				<Link to='/catalogue' className="brand_btn" style={{background: '#5fa618', border: '1px solid #5fa618',  color: 'white', textDecoration: 'none', textAlign: 'center'}}>ВСЕ</Link>
 				{
 					categories?.map(it => (
@@ -47,7 +47,7 @@ const Catalogue = () => {
 			}
 		</div>
 		<div className='btn_wrapper_end'>
-			<Link to='/catalogue' className="green_outlined_btn" style={{textDecoration: 'none'}} data-aos="zoom-in" data-aos-duration='2000'>Посмотреть весь каталог</Link>
+			<Link to='/catalogue' className="green_outlined_btn" style={{textDecoration: 'none'}} data-aos="zoom-in" data-aos-duration='1000'>Посмотреть весь каталог</Link>
 		</div>
 	</div>
   )
