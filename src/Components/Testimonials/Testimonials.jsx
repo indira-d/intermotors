@@ -13,7 +13,7 @@ const Testimonials = () => {
 				testimonials?.map((it, index) => (
 				<div className="testimonial" key={index}
 				    data-aos={ index % 2 === 0 ? "fade-right" : "fade-left"} 
-					data-aos-duration="2000">
+					data-aos-duration="1000">
 					<div className="testimonial_img_block">
 						<img src={it?.image} alt="" className="testimonial_img" />
 					</div>
