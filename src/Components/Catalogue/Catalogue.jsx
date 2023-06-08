@@ -16,6 +16,7 @@ const Catalogue = () => {
 
   return (
 	<div className='catalogue'>
+
 	  <h2 className='h2' data-aos="fade-down" data-aos-duration='1000'>Каталог машин</h2>
 		<div className="catalogue_filter">
 			<div className='btn_wrapper'>
