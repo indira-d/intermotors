@@ -10,7 +10,7 @@ const Slider = ({executeScroll}) => {
 	const contacts = useSelector(state => state.cars.contacts)
 	const sliderData = useSelector(state => state.cars.sliderData)
   return (
-	<div className="slider">
+	<div className="slider" key={executeScroll}>
 		<div className="intermotors">INTER MOTORS</div>
 		<div className='slider_wrapper'>
 					<div className="left_block"> 

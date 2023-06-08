@@ -11,6 +11,9 @@ import { getCars, getCategories, getContacts, getSliderData, getTestimonials } f
 import { useDispatch } from 'react-redux'
 import './Home.css'
 import Map from '../../Components/Map/Map'
+import Animation from '../../Components/Animation/Animation'
+import HorizontalScroll from '../../Components/HorizontalScroll/HorizontalScroll'
+
 
 const Home = () => {
 	const dispatch = useDispatch()
@@ -25,7 +28,6 @@ const Home = () => {
   }, [dispatch])
 
    const executeScroll = () => {
-	console.log('test')
 	myRef.current.scrollIntoView()
    }
 
@@ -37,8 +39,10 @@ const Home = () => {
 		<div ref={myRef}>
 			<AboutCompany/>
 		</div>
-		<Premium />
-		<Car />
+		<Premium/>
+		{/* <Car /> */}
+		<HorizontalScroll />
+	
 		<Testimonials />
 		<Map />
 		<Footer />
