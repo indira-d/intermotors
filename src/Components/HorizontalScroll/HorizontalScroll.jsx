@@ -32,24 +32,25 @@ export default function HorizontalScroll() {
     <div className="App" ref={component}>
       <div ref={slider} className="container">
         <div className="panel">
-           <img src='/assets/car.svg' alt='' className='panel_img'/>
-           <div className="horizontal_text">
+        {/* <video controls autoplay className='panel_img'><source src="/assets/video.mp4" type="video/mp4" /></video> */}
+           <img src='/assets/1.svg' alt='' className='panel_img'/>
+           <div className="horizontal_text" data-aos="fade-up"  data-aos-duration="3000">
             <div className="horizontal_title">TESLA MODEL 3</div>
             <div className="horizontal_subtitle">Specs Performance</div>
             <div className="horizontal_description">TESLA MODEL 3 - премиум седан с высокой производительностью и передавыми функциями самоуправления</div>
            </div>
         </div>
         <div className="panel">
-           <img src='/assets/car.svg' alt='' className='panel_img'/>
-           <div className="horizontal_text">
+           <img src='/assets/2.svg' alt='' className='panel_img'/>
+           <div className="horizontal_text" data-aos="fade-up"  data-aos-duration="3000">
             <div className="horizontal_title">TESLA MODEL 3</div>
             <div className="horizontal_subtitle">Specs Performance</div>
             <div className="horizontal_description">TESLA MODEL 3 - премиум седан с высокой производительностью и передавыми функциями самоуправления</div>
            </div>
         </div>
         <div className="panel">
-          <img src='/assets/car.svg' alt='' className='panel_img'/>
-          <div className="horizontal_text">
+          <img src='/assets/3.svg' alt='' className='panel_img'/>
+          <div className="horizontal_text" data-aos="fade-up"  data-aos-duration="3000">
             <div className="horizontal_title">TESLA MODEL 3</div>
             <div className="horizontal_subtitle">Specs Performance</div>
             <div className="horizontal_description">TESLA MODEL 3 - премиум седан с высокой производительностью и передавыми функциями самоуправления</div>
