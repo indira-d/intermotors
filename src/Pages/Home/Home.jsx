@@ -12,7 +12,8 @@ import { useDispatch } from 'react-redux'
 import './Home.css'
 import Map from '../../Components/Map/Map'
 import Animation from '../../Components/Animation/Animation'
-import HorizontalScroll from '../../Components/HorizontalScroll/HorizontalScroll'
+import VideoBlock from '../../Components/VideoBlock/VideoBlock'
+
 
 
 const Home = () => {
@@ -41,7 +42,7 @@ const Home = () => {
 		</div>
 		<Premium/>
 		{/* <Car /> */}
-		<HorizontalScroll />
+        <VideoBlock />
 	
 		<Testimonials />
 		<Map />
