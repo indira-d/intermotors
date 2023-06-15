@@ -7,6 +7,7 @@ const AboutCompany = () => {
 	
 	useEffect(() => {
 		 AOS.init({
+			 offset: 400,
 			 delay: 100,
 		 });  
 	}, [])
@@ -27,13 +28,13 @@ const AboutCompany = () => {
 
 			<div className="about_content_right">
 				<div className="about_img_block">
-					<img src="/assets/about.svg" alt="" className="about_img" data-aos="fade-down-left" data-aos-duration="3000"/>
+					<img src="/assets/about.svg" alt="" className="about_img" data-aos="fade-down-left" data-aos-duration="1200"/>
 				</div>
 			</div>
 		</div>
 		
 		<div className="about_content_bottom">
-			<div className="about_bottom_item"  data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+			<div className="about_bottom_item"  data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600">
 				<div className="about_bottom_img_block">
 					<img src="https://api.inter-motors.co/media/images/additional/Icon1.svg" alt="" className="about_icon" />
 				</div>
@@ -44,7 +45,7 @@ const AboutCompany = () => {
 					Полное ведение и осуществление сделки с Китаем
 				</div>
 			</div>
-			<div className="about_bottom_item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+			<div className="about_bottom_item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200">
 				<div className="about_bottom_img_block">
 					<img src="https://api.inter-motors.co/media/images/additional/Icon2.svg" alt="" className="about_icon" />
 				</div>
@@ -55,7 +56,7 @@ const AboutCompany = () => {
 					Подробная консультация по всем вопросам, связанная с электромобилями
 				</div>
 			</div>
-			<div className="about_bottom_item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+			<div className="about_bottom_item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1800">
 				<div className="about_bottom_img_block">
 					<img src="https://api.inter-motors.co/media/images/additional/Icon4.svg" alt="" className="about_icon" />
 				</div>
@@ -66,7 +67,7 @@ const AboutCompany = () => {
 					Оформление и проверка всей необходимой документации
 				</div>
 			</div>
-			<div className="about_bottom_item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2500">
+			<div className="about_bottom_item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2400">
 				<div className="about_bottom_img_block">
 					<img src="https://api.inter-motors.co/media/images/additional/Icon3.svg" alt="" className="about_icon" />
 				</div>

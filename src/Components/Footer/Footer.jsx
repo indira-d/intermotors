@@ -54,8 +54,8 @@ const Footer = () => {
 									<div className="contact_value">{it?.phone}</div>
 								</div>
 								<div className="social_networks_icons">		
-									<Link to={`${it?.instagram}`}><InstagramOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon' data-aos="zoom-in-down" data-aos-duration="1000"/></Link>
-									<Link to={`${it?.whatsapp}`}><WhatsAppOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon' data-aos="zoom-in-down" data-aos-duration="1500"/></Link>
+									<Link to={`${it?.instagram}`}><InstagramOutlined style={{marginRight: '15px', color: 'white'}} className='network_icon' data-aos="zoom-in-down" data-aos-duration="1000"/></Link>
+									<Link to={`${it?.whatsapp}`}><WhatsAppOutlined style={{marginRight: '15px', color: 'white'}} className='network_icon' data-aos="zoom-in-down" data-aos-duration="1500"/></Link>
 									<Link to={`${it?.facebook}`}><FacebookOutlined className='network_icon'  style={{ color: 'white'}} data-aos="zoom-in-down" data-aos-duration="2000"/></Link>
 								</div>				
 							</div>
@@ -73,7 +73,7 @@ const Footer = () => {
 					       type="text" 
 						   className="phone" 
 						   value={phone}
-						   placeholder='Ваш номер телефона' 
+						   placeholder='Ваш номер телефона'
 						   onChange={(e) => setPhone(e.target.value)}/>
 					<textarea 
 					       name="" 

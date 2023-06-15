@@ -334,6 +334,10 @@
 		100% {color:#6B9640; transform: translateX(0px);}
 }
 
-
+.anticon svg {
+	display: inline-block;
+	width: 150%;
+	height: 150%;
+}
 
 

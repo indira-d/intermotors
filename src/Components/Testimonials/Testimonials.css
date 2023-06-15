@@ -1,12 +1,13 @@
 .testimonials_wrapper{
 	 background: rgba(245, 245, 245, 1);
+	padding-bottom: 60px;
 }
 
 .testimonials_header{
 	font-size: 24px;
 	font-weight: 600;
 	text-align: center;
-	padding: 40px 0;
+	padding: 60px 0px 20px 0px;
 	letter-spacing: 1px;
 }
 
@@ -15,7 +16,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	width: 80%;
-	margin:  20px auto;
+	margin: 0px auto;
 
 }
 .testimonial{

@@ -22,8 +22,8 @@ const Slider = ({executeScroll}) => {
 						{
 							contacts?.map((it, index) => (
 								<div className="social_networks" key={index}>
-									<Link to={`${it?.instagram}`}><InstagramOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
-									<Link to={`${it?.whatsapp}`}><WhatsAppOutlined style={{marginBottom: '15px', color: 'white'}} className='network_icon'/></Link>
+									<Link to={`${it?.instagram}`}><InstagramOutlined style={{marginBottom: '25px', color: 'white'}} className='network_icon'/></Link>
+									<Link to={`${it?.whatsapp}`}><WhatsAppOutlined style={{marginBottom: '25px', color: 'white'}} className='network_icon'/></Link>
 									<Link to={`${it?.facebook}`}><FacebookOutlined className='network_icon'  style={{ color: 'white'}}/></Link>
 								</div>
 							))
