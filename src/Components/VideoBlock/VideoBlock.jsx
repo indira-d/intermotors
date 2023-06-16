@@ -21,7 +21,7 @@ const VideoBlock = () => {
 			</div>
 			<div className="text_block">
 				<div className="matte-glass-block" data-aos="fade-down" data-aos-duration="500">
-					<div className="">
+					<div className="text_block_text">
 						<div className="" data-aos="fade-left" data-aos-duration="500">Премиальное качество, стиль и надежность</div>
 						<div className="" data-aos="fade-left" data-aos-duration="1000">Китайские электромобили теперь доступнее в Кыргызстане и СНГ</div>
 					</div>
